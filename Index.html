@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Profissional - Minha Escolha de Carreira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .wiki-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .author-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Wiki Profissional</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-blue-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-blue-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-blue-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-blue-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-blue-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-blue-600">Autor</a>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Minha Jornada Profissional</h2>
+            <p class="text-xl md:text-2xl opacity-90 mb-8">Uma análise detalhada sobre a escolha e desenvolvimento da minha carreira</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#profissional" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Começar Leitura
+                </a>
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                    Conhecer Autor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="wiki-content py-16 px-6">
+        <!-- Descrição do Profissional -->
+        <section id="profissional" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">[INSIRA AQUI A DESCRIÇÃO COMPLETA DO PROFISSIONAL]</p>
+                    <p class="text-lg">[CONTINUE COM O TEXTO SOBRE A DESCRIÇÃO DO PROFISSIONAL]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dados Históricos -->
+        <section id="historico" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-green-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">[INSIRA AQUI OS DADOS HISTÓRICOS DA PROFISSÃO]</p>
+                    <p class="text-lg">[CONTINUE COM AS INFORMAÇÕES HISTÓRICAS E EVOLUÇÃO DA CARREIRA]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Descrição da Carreira -->
+        <section id="carreira" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Descrição da Carreira Profissional</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">[INSIRA AQUI A DESCRIÇÃO DA CARREIRA PROFISSIONAL]</p>
+                    <p class="text-lg">[DETALHE OS ASPECTOS DA CARREIRA, OPORTUNIDADES E DESAFIOS]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processo de Formação -->
+        <section id="formacao" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">[INSIRA AQUI O PROCESSO DE FORMAÇÃO PROFISSIONAL]</p>
+                    <p class="text-lg">[DESCREVA A JORNADA EDUCACIONAL E DESENVOLVIMENTO DE HABILIDADES]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Referências -->
+        <section id="referencias" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-red-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>[REFERÊNCIA 1 - LIVRO, ARTIGO OU FONTE]</li>
+                        <li>[REFERÊNCIA 2 - LIVRO, ARTIGO OU FONTE]</li>
+                        <li>[REFERÊNCIA 3 - LIVRO, ARTIGO OU FONTE]</li>
+                        <li>[REFERÊNCIA 4 - SITE OU PUBLICAÇÃO ONLINE]</li>
+                        <li>[REFERÊNCIA 5 - ENTREVISTA OU FONTE PESSOAL]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Autor Section -->
+        <section id="autor" class="mb-16">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7fc16bf6-7344-472e-9f11-926f6c52d83e.png" alt="Retrato profissional de Vitor da Costa - jovem profissional com trajes formais, sorrindo levemente em fundo neutro" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
+                        <i class="fas fa-user text-4xl" style="display: none;"></i>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl font-bold mb-4">Vitor da Costa</h2>
+                        <div class="space-y-3">
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-graduation-cap mr-2"></i>
+                                [INSIRA AQUI ONDE VITOR ESTUDA - EX: ESTUDANTE DE ENGENHaria NA UNIVERSIDADE X]
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-briefcase mr-2"></i>
+                                [INSIRA AQUI O QUE VITOR FAZ - EX: ESTAGIÁRIO EM DESENVOLVIMENTO DE SOFTWARE]
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-heart mr-2"></i>
+                                [INSIRA INTERESSES PESSOAIS E PROFISSIONAIS]
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                [INSIRA LOCALIZAÇÃO - EX: SÃO PAULO, BRASIL]
+                            </p>
+                        </div>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Wiki Profissional</h3>
+                    <p class="opacity-80">Um guia completo sobre a jornada de escolha e desenvolvimento profissional.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Navegação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">Descrição do Profissional</a></li>
+                        <li><a href="#historico" class="opacity-80 hover:opacity-100 transition duration-300">Dados Históricos</a></li>
+                        <li><a href="#carreira" class="opacity-80 hover:opacity-100 transition duration-300">Carreira</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
+                    <a href="mailto:contato@wikiprofissional.com" class="text-blue-300 hover:text-blue-200 transition duration-300">
+                        contato@wikiprofissional.com
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="opacity-70">© 2024 Wiki Profissional. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile menu toggle (placeholder for future functionality)
+        document.querySelector('button.md\\:hidden').addEventListener('click', () => {
+            alert('Menu mobile será implementado em breve!');
+        });
+    </script>
+</body>
+</html>
