@@ -48,6 +48,11 @@
         .back-to-top.visible {
             opacity: 1;
         }
+        /* Correção para quebra de linha nas referências */
+        #referencias .prose li {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -226,12 +231,22 @@
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <ul class="list-disc list-inside space-y-2 text-lg">
-                        <li>PROGRAMADOR. In: WIKIPÉDIA: a enciclopédia livre. Flórida: Wikimedia Foundation, 2024. Disponível em: https://pt.wikipedia.org/wiki/Programador. Acesso em: 28 ago. 2025.</li>
-                        <li>ANÁLISE de requisitos de software. In: WIKIPÉDIA: a enciclopédia livre. Flórida: Wikimedia Foundation, 2023. Disponível em: https://pt.wikipedia.org/wiki/An%C3%A1lise_de_requisitos_de_software. Acesso em: 28 ago. 2025.</li>
-                        <li>O QUE faz um desenvolvedor de software?. Randstad, [s.d.]. Disponível em: https://www.randstad.com.br/profissoes/desenvolvedor-de-software/. Acesso em: 28 ago. 2025.</li>
-                        <li>OLIVEIRA, Vinícius de. O que faz um Desenvolvedor de Software? Salário, carreira e mais. PM3, 25 mar. 2024. Disponível em: https://pm3.com.br/blog/desenvolvedor-de-software/. Acesso em: 28 ago. 2025.</li>
-                        <li>DESENVOLVEDOR de Software: o que faz, salário e carreira. Quero Bolsa, 7 maio 2024. Disponível em: https://querobolsa.com.br/carreiras-e-profissoes/desenvolvedor-de-software. Acesso em: 28 ago. 2025.</li>
+                    <ul class="list-disc list-inside space-y-4 text-lg">
+                        <li>
+                            PROGRAMADOR. In: WIKIPÉDIA, a enciclopédia livre. Flórida: Wikimedia Foundation, 2025. Disponível em: <a href="https://pt.wikipedia.org/wiki/Programador" target="_blank" class="text-blue-600 hover:underline">https://pt.wikipedia.org/wiki/Programador</a>. Acesso em: 31 ago. 2025.
+                        </li>
+                        <li>
+                            ANÁLISE de requisitos de software. In: WIKIPÉDIA, a enciclopédia livre. Flórida: Wikimedia Foundation, 2025. Disponível em: <a href="https://pt.wikipedia.org/wiki/An%C3%A1lise_de_requisitos_de_software" target="_blank" class="text-blue-600 hover:underline">https://pt.wikipedia.org/wiki/Análise_de_requisitos_de_software</a>. Acesso em: 31 ago. 2025.
+                        </li>
+                        <li>
+                            O QUE FAZ um desenvolvedor de software. <strong>Randstad</strong>, [s.d.]. Disponível em: <a href="https://www.randstad.com.br/profissoes/desenvolvedor-de-software/" target="_blank" class="text-blue-600 hover:underline">https://www.randstad.com.br/profissoes/desenvolvedor-de-software/</a>. Acesso em: 31 ago. 2025.
+                        </li>
+                        <li>
+                            DESENVOLVEDOR de Software: o que faz, salário e carreira. <strong>PM3</strong>, 2024. Disponível em: <a href="https://pm3.com.br/blog/desenvolvedor-de-software/" target="_blank" class="text-blue-600 hover:underline">https://pm3.com.br/blog/desenvolvedor-de-software/</a>. Acesso em: 31 ago. 2025.
+                        </li>
+                        <li>
+                            DESENVOLVEDOR de Software. <strong>Quero Bolsa</strong>, [s.d.]. Disponível em: <a href="https://querobolsa.com.br/carreiras-e-profissoes/desenvolvedor-de-software" target="_blank" class="text-blue-600 hover:underline">https://querobolsa.com.br/carreiras-e-profissoes/desenvolvedor-de-software</a>. Acesso em: 31 ago. 2025.
+                        </li>
                     </ul>
                 </div>
             </div>
