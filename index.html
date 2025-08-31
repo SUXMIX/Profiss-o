@@ -51,7 +51,6 @@
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
-    <!-- Header -->
     <header class="bg-white shadow-lg">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -69,14 +68,21 @@
                     <a href="#referencias" class="nav-link text-gray-600 hover:text-blue-600">Referências</a>
                     <a href="#autor" class="nav-link text-gray-600 hover:text-blue-600">Autor</a>
                 </div>
-                <button class="md:hidden text-gray-600">
+                <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Profissional</a>
+                <a href="#historico" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Histórico</a>
+                <a href="#carreira" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Carreira</a>
+                <a href="#formacao" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Formação</a>
+                <a href="#referencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Referências</a>
+                <a href="#autor" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Autor</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Desenvolvimento de Software</h2>
@@ -92,9 +98,7 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="wiki-content py-16 px-6">
-        <!-- Descrição do Profissional -->
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
@@ -110,7 +114,6 @@
             </div>
         </section>
 
-        <!-- Dados Históricos -->
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
@@ -130,7 +133,6 @@
             </div>
         </section>
 
-        <!-- Descrição da Carreira -->
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
@@ -153,7 +155,6 @@
             </div>
         </section>
 
-        <!-- Processo de Formação -->
         <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
@@ -163,13 +164,55 @@
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">[INSIRA AQUI O PROCESSO DE FORMAÇÃO PROFISSIONAL]</p>
-                    <p class="text-lg">[DESCREVA A JORNADA EDUCACIONAL E DESENVOLVIMENTO DE HABILIDADES]</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mt-6 mb-4">Pilar 1: Formação Acadêmica - A Base Fundamental</h3>
+                    <p class="text-lg mb-4">Este é o pilar que fornece os fundamentos científicos e a visão sistêmica da computação, preparando o profissional para aprender e se adaptar a qualquer tecnologia futura.</p>
+                    <p class="text-lg mb-2"><strong>Graduação (Bacharelado):</strong> O caminho mais tradicional, com duração média de 4 a 5 anos.</p>
+                    <p class="text-lg mb-2"><strong>Cursos Principais:</strong> Engenharia de Software, Ciência da Computação e Sistemas de Informação.</p>
+                    <p class="text-lg mb-2"><strong>Conteúdos Essenciais:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                        <li><strong>Fundamentos:</strong> Lógica de Programação, Algoritmos e Estruturas de Dados.</li>
+                        <li><strong>Engenharia:</strong> Engenharia de Requisitos, Arquitetura de Software, Testes e Qualidade.</li>
+                        <li><strong>Sistemas:</strong> Bancos de Dados, Sistemas Operacionais, Redes de Computadores e Compiladores.</li>
+                        <li><strong>Matemática:</strong> Cálculo, Álgebra Linear e Matemática Discreta.</li>
+                    </ul>
+                    <p class="text-lg mt-4"><strong>Cursos Técnicos e Tecnólogos:</strong> Com menor duração, são mais focados nas necessidades práticas e imediatas do mercado, sendo ideais para quem busca uma inserção profissional mais rápida.</p>
+
+                    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Pilar 2: Experiência Prática - A Consolidação do Conhecimento</h3>
+                    <p class="text-lg mb-4">A teoria só se consolida com a prática. Este pilar é crucial para desenvolver habilidades concretas e ganhar experiência real.</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                        <li><strong>Estágios:</strong> Considerado a porta de entrada para o mercado, o estágio é essencial para aplicar o conhecimento acadêmico em um ambiente profissional, aprender sobre metodologias ágeis (Scrum, Kanban) e entender a dinâmica de uma equipe de desenvolvimento sob a orientação de engenheiros experientes.</li>
+                        <li><strong>Projetos Pessoais (Portfólio):</strong> Criar programas, sites, aplicativos ou automações próprias é fundamental. Um portfólio ativo (especialmente no GitHub) demonstra iniciativa, paixão pela área e serve como uma vitrine de habilidades para recrutadores.</li>
+                        <li><strong>Contribuições para Código Aberto (Open Source):</strong> Colaborar com projetos públicos (como React, Kubernetes, etc.) expõe o profissional a sistemas complexos, ensina a trabalhar em equipes globais e é uma experiência altamente valorizada no currículo.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Pilar 3: Aperfeiçoamento Contínuo e Especialização</h3>
+                    <p class="text-lg mb-4">A tecnologia muda em um ritmo acelerado; portanto, a formação de um engenheiro nunca termina. Este pilar garante a relevância e o crescimento do profissional ao longo da carreira.</p>
+                    <p class="text-lg mb-2"><strong>Formação Complementar:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                        <li><strong>Cursos Livres e Bootcamps:</strong> Plataformas como Coursera, Alura e Rocketseat, além de bootcamps intensivos, são excelentes para preencher lacunas de conhecimento e aprender rapidamente as tecnologias em alta no mercado.</li>
+                        <li><strong>Certificações Profissionais:</strong> Validam a expertise em áreas específicas e são muito valorizadas. As principais incluem:
+                            <ul class="list-disc list-inside space-y-2 text-lg ml-6 mt-2">
+                                <li><strong>Cloud Computing:</strong> AWS, Azure ou Google Cloud.</li>
+                                <li><strong>Metodologias Ágeis:</strong> Scrum Master, Agile.</li>
+                                <li><strong>Tecnologias Específicas:</strong> Java, Kubernetes, etc.</li>
+                                <li><strong>Áreas de Atuação:</strong> DevOps, Segurança de Software.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-lg mt-4 mb-2"><strong>Educação Continuada:</strong></p>
+                     <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                        <li><strong>Pós-Graduação:</strong> Muitos profissionais buscam especializações, MBAs (para quem almeja cargos de gestão) ou mestrados (para aprofundamento técnico em áreas como IA, Segurança da Informação ou para seguir carreira acadêmica).</li>
+                        <li><strong>Autoestudo Constante:</strong> A prática de ler documentações, acompanhar blogs técnicos, participar de webinars e fazer cursos de curta duração é parte da rotina do engenheiro.</li>
+                    </ul>
+                    <p class="text-lg mt-4 mb-2"><strong>Engajamento com a Comunidade:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4">
+                        <li><strong>Eventos e Networking:</strong> A participação em meetups, hackathons, workshops e conferências é crucial para se manter atualizado e construir uma rede de contatos.</li>
+                        <li><strong>Mentoria:</strong> Ter um mentor experiente acelera o crescimento, enquanto ser um mentor para iniciantes é uma das melhores formas de solidificar o próprio conhecimento.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Referências -->
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
@@ -190,7 +233,6 @@
             </div>
         </section>
 
-        <!-- Autor Section -->
         <section id="autor" class="mb-16">
             <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
@@ -235,7 +277,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -265,7 +306,6 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -303,9 +343,12 @@
             });
         });
 
-        // Mobile menu toggle (placeholder for future functionality)
-        document.querySelector('button.md\\:hidden').addEventListener('click', () => {
-            alert('Menu mobile será implementado em breve!');
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
