@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Escolha de Profissão</title>
+    <title>Wiki - Programador de Software</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .wiki-content { max-width: 1200px; margin: 0 auto; }
         .section-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .section-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-        /* Cor do Tema: Laranja */
-        .author-card { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
+        
+        /* Cor do Tema: Amarelo (Alterado de Laranja) */
+        /* Tailwind yellow-500: #eab308; yellow-600: #d97706 */
+        .author-card { background: linear-gradient(135deg, #eab308 0%, #d97706 100%); }
         .nav-link { position: relative; transition: color 0.3s ease; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #f97316; transition: width 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #eab308; transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
         .back-to-top { position: fixed; bottom: 20px; right: 20px; opacity: 0; transition: opacity 0.3s ease; }
         .back-to-top.visible { opacity: 1; }
@@ -25,19 +27,18 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user text-white text-xl"></i> </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-orange-600">Início</a>
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-orange-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-orange-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-orange-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-orange-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-orange-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-orange-600">Autor</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-yellow-600">Início</a>
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-yellow-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-yellow-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-yellow-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-yellow-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-yellow-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-yellow-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600"><i class="fas fa-bars text-2xl"></i></button>
             </div>
@@ -53,12 +54,12 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
+    <section class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Programador ou Deselvolvedor de Software</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Começar Leitura</a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition duration-300">Conhecer Autor</a>
+                <a href="#profissional" class="bg-white text-yellow-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Começar Leitura</a>
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-yellow-600 transition duration-300">Conhecer Autor</a>
             </div>
         </div>
     </section>
@@ -67,9 +68,8 @@
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-orange-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user text-yellow-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed"><p class="text-lg mb-4">O programador ou desenvolvedor de software é o profissional responsável por criar, testar, manter e atualizar programas e sistemas digitais. Ele escreve códigos em linguagens de programação (como Python, Java, C#, JavaScript) para atender às necessidades de usuários e empresas. Atua tanto em aplicações para computadores quanto em sistemas web, aplicativos móveis, jogos e softwares embarcados.</p></div>
@@ -79,8 +79,8 @@
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-yellow-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
@@ -97,8 +97,8 @@
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-yellow-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição da Carreira Profissional</h2>
                 </div>
@@ -118,8 +118,8 @@
         <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-yellow-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
                 </div>
@@ -140,8 +140,8 @@
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-yellow-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
@@ -168,7 +168,7 @@
                         <div class="space-y-3">
                             <p class="text-lg opacity-90"><i class="fas fa-graduation-cap mr-2"></i>Cursando informática no IFBA - Campus Irecê (1º INFO B)</p>
                             <p class="text-lg opacity-90"><i class="fas fa-briefcase mr-2"></i>Apenas estudante</p>
-                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2"></i>Gosta de jogar, assistir jogos e é fissurado em tecnologia</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2"></i>Gosta de jogar, assistir jogos e é fissurado em tecnologia</p>
                             <p class="text-lg opacity-90"><i class="fas fa-map-marker-alt mr-2"></i>Irecê, Bahia, Brasil</p>
                         </div>
                         <div class="flex justify-center md:justify-start space-x-4 mt-6">
@@ -204,7 +204,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-orange-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-orange-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-yellow-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
