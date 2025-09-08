@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Escolha de Profissão</title>
+    <title>Wiki - Tecnologia da Informação</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,8 +18,10 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        /* Cor do Tema: Yellow */
+        /* Tailwind yellow-400: #facc15; yellow-500: #eab308; yellow-600: #ca8a04 */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
         }
         .nav-link {
             position: relative;
@@ -32,7 +34,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            background-color:#facc15; /* Cor yellow-400 */
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -61,44 +63,38 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-microchip text-white text-xl"></i>
                     </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index" class="nav-link text-gray-600 hover:text-green-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-yellow-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-yellow-600">TI</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-yellow-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-yellow-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
             <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="index" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Início</a>
-                <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Profissional</a>
-                <a href="#historico" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Histórico</a>
-                <a href="#carreira" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Carreira</a>
-                <a href="#formacao" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Formação</a>
+                <a href="index.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Início</a>
+                <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">TI</a>
                 <a href="#referencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Referências</a>
                 <a href="#autor" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Autor</a>
             </div>
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Tecnologia da Informação</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-yellow-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-yellow-600 transition duration-300">
                     Conhecer Autor
                 </a>
             </div>
@@ -109,8 +105,8 @@
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-laptop-code text-yellow-600 text-2xl"></i>
                     </div>
                         <h2 class="text-3xl font-bold text-gray-800">TI</h2>
                 </div>
@@ -143,21 +139,21 @@
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-red-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-yellow-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <ul class="list-disc list-inside space-y-4 text-lg">
                         <li>
-                            <a href="https://www.guiadacarreira.com.br/blog/cursos-para-quem-gosta-de-tecnologia" target="_blank" class="text-blue-600 hover:underline">https://www.guiadacarreira.com.br/blog/cursos-para-quem-gosta-de-tecnologia</a>.
+                            <a href="https://www.guiadacarreira.com.br/blog/cursos-para-quem-gosta-de-tecnologia" target="_blank" class="text-yellow-600 hover:underline">https://www.guiadacarreira.com.br/blog/cursos-para-quem-gosta-de-tecnologia</a>.
                         </li>
                         <li>
-                            <a href="https://www.serasaexperian.com.br/carreiras/blog-carreiras/area-de-ti/" target="_blank" class="text-blue-600 hover:underline">https://www.serasaexperian.com.br/carreiras/blog-carreiras/area-de-ti/</a>. 
+                            <a href="https://www.serasaexperian.com.br/carreiras/blog-carreiras/area-de-ti/" target="_blank" class="text-yellow-600 hover:underline">https://www.serasaexperian.com.br/carreiras/blog-carreiras/area-de-ti/</a>. 
                         </li>
                         <li>
-                            <a href="https://www-suno-com-br.cdn.ampproject.org/v/s/www.suno.com.br/tudo-sobre/bill-gates/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=17572008226824&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.suno.com.br%2Ftudo-sobre%2Fbill-gates%2F" target="_blank" class="text-blue-600 hover:underline">https://www-suno-com-br.cdn.ampproject.org/v/s/www.suno.com.br/tudo-sobre/bill-gates/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%20%251%24s&aoh=17572008226824&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.suno.com.br%2Ftudo-sobre%2Fbill-gates%2F</a>. 
+                            <a href="https://www-suno-com-br.cdn.ampproject.org/v/s/www.suno.com.br/tudo-sobre/bill-gates/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%251%24s&aoh=17572008226824&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.suno.com.br%2Ftudo-sobre%2Fbill-gates%2F" target="_blank" class="text-yellow-600 hover:underline">https://www-suno-com-br.cdn.ampproject.org/v/s/www.suno.com.br/tudo-sobre/bill-gates/amp/?amp_gsa=1&amp_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=De%251%24s&aoh=17572008226824&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.suno.com.br%2Ftudo-sobre%2Fbill-gates%2F</a>. 
                         </li>
                     </ul>
                 </div>
@@ -165,10 +161,10 @@
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card bg-green-600 rounded-2xl shadow-xl p-8 text-white">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
                     <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
-                        <img src="https://i.ibb.co/hJbtkh4f/Safira.jpg" alt="Safira" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
+                        <img src="https://i.ibb.co/hJbtkh4f/Safira.jpg" alt="Retrato profissional de Safira Maciel da Silva - jovem profissional com trajes formais, sorrindo levemente em fundo neutro" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
                         <i class="fas fa-user text-4xl" style="display: none;"></i>
                     </div>
                     <div class="flex-1 text-center md:text-left">
@@ -184,7 +180,7 @@
                             </p>
                             <p class="text-lg opacity-90">
                                 <i class="fas fa-heart mr-2"></i>
-                                Gosta de ler, ouvir música, jogar vôlei, assistir séries e desenhar.
+                                Gosta de ler, ouvir música, jogar vôlei, assistir séries e desenhar.
                             </p>
                             <p class="text-lg opacity-90">
                                 <i class="fas fa-map-marker-alt mr-2"></i>
@@ -212,15 +208,15 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Navegação</h3>
                     <ul class="space-y-2">
-                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">Descrição do Profissional</a></li>
-                        <li><a href="#historico" class="opacity-80 hover:opacity-100 transition duration-300">Dados Históricos</a></li>
-                        <li><a href="#carreira" class="opacity-80 hover:opacity-100 transition duration-300">Carreira</a></li>
+                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">TI</a></li>
+                        <li><a href="#referencias" class="opacity-80 hover:opacity-100 transition duration-300">Referências</a></li>
+                        <li><a href="#autor" class="opacity-80 hover:opacity-100 transition duration-300">Autor</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
                     <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
-                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-blue-300 hover:text-blue-200 transition duration-300">
+                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-yellow-300 hover:text-yellow-200 transition duration-300">
                         20251ireinfint0002@ifba.edu.br
                     </a>
                 </div>
@@ -231,7 +227,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-yellow-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
