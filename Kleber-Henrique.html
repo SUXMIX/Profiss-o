@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Escolha de Profissões</title>
+    <title>Wiki - Médico Cirurgião</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,8 +18,12 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Azul (Blue), atualizado a partir do card do index */
+        /* Tailwind blue-500: #3b82f6; blue-600: #2563eb */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            /* Gradiente atualizado de verde para azul */
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
         }
         .nav-link {
             position: relative;
@@ -32,7 +36,8 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            /* Cor do sublinhado atualizada de verde para azul (blue-500) */
+            background-color:#3b82f6;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -48,11 +53,10 @@
         .back-to-top.visible {
             opacity: 1;
         }
-        /* Correção para quebra de linha nas referências */
         #referencias .prose li {
             overflow-wrap: break-word;
             word-wrap: break-word;
-            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+            word-break: break-all;
         }
     </style>
 </head>
@@ -61,19 +65,18 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-md text-white text-xl"></i> </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index" class="nav-link text-gray-600 hover:text-green-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index" class="nav-link text-gray-600 hover:text-blue-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-blue-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-blue-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-blue-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-blue-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-blue-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-blue-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
@@ -91,14 +94,14 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Médico Cirurgião</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
                     Conhecer Autor
                 </a>
             </div>
@@ -110,8 +113,7 @@
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
-                    </div>
+                        <i class="fas fa-user-md text-blue-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
@@ -123,8 +125,8 @@
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
@@ -137,32 +139,33 @@
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição da Carreira Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <p class="text-lg mb-4">O médico cirurgião pode atuar em diversas especialidades, como:</p>
-                    <p class="text-lg mb-4">● Cirurgia geral (abdômen, parede abdominal, emergências cirúrgicas).</p>
-                    <p class="text-lg mb-4">● Cirurgia cardiovascular (coração e vasos sanguíneos).</p>
-                    <p class="text-lg mb-4">● Neurocirurgia (cérebro, medula espinhal e sistema nervoso).</p>
-                    <p class="text-lg mb-4">● Cirurgia ortopédica e traumatológica (ossos, articulações, fraturas).</p>
-                    <p class="text-lg mb-4">● Cirurgia plástica e reconstrutiva.</p>
-                    <p class="text-lg mb-4">● Cirurgia pediátrica.</p>
-                    <p class="text-lg mb-4">● Transplantes de órgãos.</p>
-                    
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Cirurgia geral (abdômen, parede abdominal, emergências cirúrgicas).</li>
+                        <li>Cirurgia cardiovascular (coração e vasos sanguíneos).</li>
+                        <li>Neurocirurgia (cérebro, medula espinhal e sistema nervoso).</li>
+                        <li>Cirurgia ortopédica e traumatológica (ossos, articulações, fraturas).</li>
+                        <li>Cirurgia plástica e reconstrutiva.</li>
+                        <li>Cirurgia pediátrica.</li>
+                        <li>Transplantes de órgãos.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
+        <section id="formacao" class="mb-16 space-y-8">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Processo de Formação Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <p class="text-lg mb-4">Formação: graduação em Medicina (duração média de 6 anos).</p>
@@ -171,73 +174,75 @@
                     <p class="text-lg mb-4">Exigência: registro no Conselho Regional de Medicina (CRM) para atuar.</p>
                 </div>
             </div>
-        </section>
 
-        <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-school text-blue-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Instituições de Ensino</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Instituições de Ensino de Destaque</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Universidade de São Paulo (USP).</p>
-                    <p class="text-lg mb-4">Universidade Federal de Minas Gerais (UFMG).</p>
-                    <p class="text-lg mb-4">Universidade Estadual de Campinas (UNICAMP).</p>
-                    <p class="text-lg mb-4">Universidade Federal do Rio de Janeiro (UFRJ).</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Universidade de São Paulo (USP).</li>
+                        <li>Universidade Federal de Minas Gerais (UFMG).</li>
+                        <li>Universidade Estadual de Campinas (UNICAMP).</li>
+                        <li>Universidade Federal do Rio de Janeiro (UFRJ).</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-hospital text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Empresa e Instituições de Atuação</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Hospitais públicos e privados.</p>
-                    <p class="text-lg mb-4">Clínicas especializadas em cirurgias.</p>
-                    <p class="text-lg mb-4">Centros de pesquisa médica e hospitais universitários.</p>
-                    <p class="text-lg mb-4">Organizações de saúde internacionais e ONGs médicas.</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Hospitais públicos e privados.</li>
+                        <li>Clínicas especializadas em cirurgias.</li>
+                        <li>Centros de pesquisa médica e hospitais universitários.</li>
+                        <li>Organizações de saúde internacionais e ONGs médicas.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="formacao" class="mb-16">
+            
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-award text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Profissionais de Destaque</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">José Pedro da Silva - revolucionou a cirurgia cardíaca infantil.</p>
-                    <p class="text-lg mb-4">Euryclides de Jesus Zerbini – pioneiro em transplantes cardíacos no Brasil.</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>José Pedro da Silva - revolucionou a cirurgia cardíaca infantil.</li>
+                        <li>Euryclides de Jesus Zerbini – pioneiro em transplantes cardíacos no Brasil.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
+        <section id="imagens" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-image text-blue-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Imagens</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Imagens da Profissão</h2>
                 </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://www.izbgastro.com.br/images/medico-cirurgiao-gastrointestinal-01.jpg" alt="Imagem" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://cdn.prod.website-files.com/6183dd96412e87442af816b4/6335fe5732422d28bc32d043_Cirurgia_geral_75KB.jpg" alt="Imagem" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://f.i.uol.com.br/fotografia/2015/05/13/511160-970x600-1.jpeg" alt="Imagem" class="w-100 rounded-2xl" onerror="this.style.display='none'">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://www.izbgastro.com.br/images/medico-cirurgiao-gastrointestinal-01.jpg" alt="Cirurgião em procedimento" class="w-full h-auto object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://cdn.prod.website-files.com/6183dd96412e87442af816b4/6335fe5732422d28bc32d043_Cirurgia_geral_75KB.jpg" alt="Equipe cirúrgica em operação" class="w-full h-auto object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://f.i.uol.com.br/fotografia/2015/05/13/511160-970x600-1.jpeg" alt="Close-up de procedimento cirúrgico" class="w-full h-auto object-cover" onerror="this.style.display='none'">
+                    </div>
                 </div>
             </div>
         </section>
@@ -245,59 +250,37 @@
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-red-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <ul class="list-disc list-inside space-y-4 text-lg">
-                        <li>
-                            <a href="https://sanarmed.com/cirurgia-geral-residencia-mercado-de-trabalho-areas-de-atuacao-e-mais/" target="_blank" class="text-blue-600 hover:underline">https://sanarmed.com/cirurgia-geral-residencia-mercado-de-trabalho-areas-de-atuacao-e-mais/</a>. 
-                        </li>
-                        <li>
-                            <a href="https://pt.m.wikipedia.org/wiki/Euryclides_de_Jesus_Zerbini" target="_blank" class="text-blue-600 hover:underline">https://pt.m.wikipedia.org/wiki/Euryclides_de_Jesus_Zerbini</a>. 
-                        </li>
-                        <li>
-                            <a href="https://querobolsa.com.br/carreiras-e-profissoes/cirurgiao-geral" target="_blank" class="text-blue-600 hover:underline">https://querobolsa.com.br/carreiras-e-profissoes/cirurgiao-geral</a>. 
-                        </li>
-                        <li>
-                            USP – Faculdade de Medicina. Disponível em: <a href="www.fm.usp.br" target="_blank" class="text-blue-600 hover:underline">www.fm.usp.br</a>. 
-                        </li>
-                        <li>
-                            Artigos de universidades, sociedades médicas especializadas e sites de pesquisa.
-                        </li>
+                        <li><a href="https://sanarmed.com/cirurgia-geral-residencia-mercado-de-trabalho-areas-de-atuacao-e-mais/" target="_blank" class="text-blue-600 hover:underline break-words">https://sanarmed.com/cirurgia-geral-residencia-mercado-de-trabalho-areas-de-atuacao-e-mais/</a></li>
+                        <li><a href="https://pt.m.wikipedia.org/wiki/Euryclides_de_Jesus_Zerbini" target="_blank" class="text-blue-600 hover:underline break-words">https://pt.m.wikipedia.org/wiki/Euryclides_de_Jesus_Zerbini</a></li>
+                        <li><a href="https://querobolsa.com.br/carreiras-e-profissoes/cirurgiao-geral" target="_blank" class="text-blue-600 hover:underline break-words">https://querobolsa.com.br/carreiras-e-profissoes/cirurgiao-geral</a></li>
+                        <li>USP – Faculdade de Medicina. Disponível em: <a href="https://www.fm.usp.br" target="_blank" class="text-blue-600 hover:underline break-words">www.fm.usp.br</a></li>
+                        <li>Artigos de universidades, sociedades médicas especializadas e sites de pesquisa.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card bg-green-600 rounded-2xl shadow-xl p-8 text-white">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
-                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                         <img src="https://i.ibb.co/WWYLD72j/Kleber.jpg" alt="Kleber" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
                         <i class="fas fa-user text-4xl" style="display: none;"></i>
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h2 class="text-3xl font-bold mb-4">Kleber Henrique Cordal Novaes dos Anjos</h2>
                         <div class="space-y-3">
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-briefcase mr-2"></i>
-                                Apenas estudante
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-heart mr-2"></i>
-                                Gosta de sair para eventos casuais, tecnologias inovadores, curiosidades de humanas e ficar só.
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                Irecê, Bahia, Brasil
-                            </p>
+                            <p class="text-lg opacity-90"><i class="fas fa-graduation-cap mr-2 w-5 text-center"></i>Cursando informática no IFBA - Campus Irecê (1º INFO B)</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-briefcase mr-2 w-5 text-center"></i>Apenas estudante</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2 w-5 text-center"></i>Gosta de sair para eventos casuais, tecnologias inovadores, curiosidades de humanas e ficar só.</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-map-marker-alt mr-2 w-5 text-center"></i>Irecê, Bahia, Brasil</p>
                         </div>
                         <div class="flex justify-center md:justify-start space-x-4 mt-6">
                             <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
@@ -339,7 +322,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
