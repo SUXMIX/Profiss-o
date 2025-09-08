@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Escolha de profissões</title>
+    <title>Wiki - Nutricionista</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,8 +18,11 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Rosa (Pink), atualizado a partir do card do index */
+        /* Tailwind pink-500: #ec4899; pink-600: #db2777 */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
         }
         .nav-link {
             position: relative;
@@ -32,7 +35,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            background-color: #ec4899; /* Cor do sublinhado atualizada para pink-500 */
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -48,11 +51,10 @@
         .back-to-top.visible {
             opacity: 1;
         }
-        /* Correção para quebra de linha nas referências */
         #referencias .prose li {
             overflow-wrap: break-word;
             word-wrap: break-word;
-            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+            word-break: break-all;
         }
     </style>
 </head>
@@ -61,19 +63,15 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-apple-alt text-white text-xl"></i> </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index" class="nav-link text-gray-600 hover:text-green-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index" class="nav-link text-gray-600 hover:text-pink-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-pink-600">Profissional</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-pink-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-pink-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
@@ -82,23 +80,20 @@
             <div id="mobile-menu" class="hidden md:hidden mt-4">
                 <a href="index" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Início</a>
                 <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Profissional</a>
-                <a href="#historico" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Histórico</a>
-                <a href="#carreira" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Carreira</a>
-                <a href="#formacao" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Formação</a>
                 <a href="#referencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Referências</a>
                 <a href="#autor" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Autor</a>
             </div>
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-pink-500 to-pink-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Nutricionista</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pink-600 transition duration-300">
                     Conhecer Autora
                 </a>
             </div>
@@ -106,72 +101,89 @@
     </section>
 
     <main class="wiki-content py-16 px-6">
-        <section id="profissional" class="mb-16">
+        <section id="profissional" class="mb-16 space-y-8">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-utensils text-pink-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Escolha da Profissão</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">As fundações de um  nutricionista incluem  a elaboração de planos alimentares individualizados, orientação sobre alimentação saudável, acompanhamento nutricional para prevenção de doenças, e a  gestão de unidades de alimentação e nutrição (UAN), abrangendo desde o controle de qualidade dos alimentos até a administração de cardápios e higiene. O profissional também atua na promoção da saúde, reeducação alimentar,identificação de distúrbios alimentares,e no desenvolvimento de produtos alimentícios,visando sempre o equilíbrio nutricional do indivíduo ou da coletividade.</p>
-                    <p class="text-lg mb-4">Um nutricionista pode atuar em áreas diversas como: Nutrição clínica (hospitais, clínicas ), saúde pública (programa de saúde, vigilância sanitária), nutrição esportiva (clubes, academias), indústria alimentícia (produção, controle de qualidade) e gestão de unidades de alimentação(restaurantes, refeitórios).Outras áreas incluem a gastronomia,o marketing nutricional, a docência, a consultoria, a pesquisa e a nutrição voltada para públicos específicos,como crianças e idosos.</p>
-                    <p class="text-lg mb-4">Para se tornar nutricionista, é obrigatório o diploma de graduação e nutrição de uma instituição reconhecida pelo MEC, seguido pelo registro no conselho regional de nutricionistas (CRN). A formação acadêmica deve incluir estágio obrigatório supervisionado, preferencialmente em três áreas distintas (clínica, social e em unidades de alimentação e nutrição). Para se destacar, o profissional deve continuar aprimorando suas habilidades e conhecimento através de cursos de especialização, aperfeiçoamento e outras atividades extracurriculares, além de desenvolver competências interpessoais como comunicação, empatia e inteligência emocional.</p>
-                    <p class="text-lg mb-4">Para se tornar nutricionista, você deve cursar uma graduação em nutrição em uma instituição de ensino superior reconhecida pelo MEC e obter registro no conselho regional de nutrição (CRN) do seu estado. Algumas universidades de destaque incluem a USP, UFMG, Unicamp e UFRJ, entre outras instituições públicas e privadas que ofereçam o curso e se preparam para a carreira. </p>
-                    <p class="text-lg mb-4">O profissional de nutrição pode atuar em uma ampla gama de empresas e instituições, como clínicas e hospitais, onde se dedica à nutrição clínica e dietoterápica; unidade de alimentação e nutrição (UAN), como restaurantes, hotéis e empresas, para gestão de cardápios e processos; industriais de alimentos, no desenvolvimento de produtos e controle de qualidade; academias e clubes esportivos, como foco e nutrição esportiva; e no setor público, em programas sociais, saúde  coletiva e vigilância sanitária.</p>
-                    <p class="text-lg mb-4">Eu indico a nutricionista Quesia Rodrigues, uma excelente profissional, a qual tivemos o privilégio de apreciar o seu belíssimo trabalho, no PSF do povoado de Matinha de Brito, ao qual resido. </p>
-                    <p class="text-lg mb-4">A história da nutrição no Brasil, começou a ganhar forma nas décadas de 1930 e 1940, como o estabelecimento do primeiro curso de nutrição na USP em 1939 e a regulamentação da profissão em 1967, pela lei n° 5.276/67, consolidada mais tarde pela lei nº 8.234/91.</p>
+                    <p class="text-lg mb-4">O nutricionista é o profissional responsável pela elaboração de planos alimentares individualizados, orientação sobre alimentação saudável, acompanhamento nutricional para prevenção de doenças, e a gestão de unidades de alimentação e nutrição (UAN), abrangendo desde o controle de qualidade dos alimentos até a administração de cardápios e higiene. O profissional também atua na promoção da saúde, reeducação alimentar, identificação de distúrbios alimentares, e no desenvolvimento de produtos alimentícios, visando sempre o equilíbrio nutricional do indivíduo ou da coletividade.</p>
+                </div>
+            </div>
+
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-pink-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Áreas de Atuação e Carreira</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Um nutricionista pode atuar em áreas diversas como: Nutrição clínica (hospitais, clínicas), saúde pública (programa de saúde, vigilância sanitária), nutrição esportiva (clubes, academias), indústria alimentícia (produção, controle de qualidade) e gestão de unidades de alimentação (restaurantes, refeitórios). Outras áreas incluem a gastronomia, o marketing nutricional, a docência, a consultoria, a pesquisa e a nutrição voltada para públicos específicos, como crianças e idosos.</p>
+                    <p class="text-lg mb-4">O profissional de nutrição pode atuar em uma ampla gama de empresas e instituições, como clínicas e hospitais, onde se dedica à nutrição clínica e dietoterápica; unidades de alimentação e nutrição (UAN), como restaurantes, hotéis e empresas, para gestão de cardápios e processos; indústrias de alimentos, no desenvolvimento de produtos e controle de qualidade; academias e clubes esportivos, com foco em nutrição esportiva; e no setor público, em programas sociais, saúde coletiva e vigilância sanitária.</p>
+                </div>
+            </div>
+
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-pink-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Formação Profissional</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Para se tornar nutricionista, é obrigatório o diploma de graduação em nutrição de uma instituição reconhecida pelo MEC, seguido pelo registro no conselho regional de nutricionistas (CRN). A formação acadêmica deve incluir estágio obrigatório supervisionado, preferencialmente em três áreas distintas (clínica, social e em unidades de alimentação e nutrição). Para se destacar, o profissional deve continuar aprimorando suas habilidades e conhecimento através de cursos de especialização, aperfeiçoamento e outras atividades extracurriculares, além de desenvolver competências interpessoais como comunicação, empatia e inteligência emocional.</p>
+                    <p class="text-lg mb-4">Algumas universidades de destaque incluem a USP, UFMG, Unicamp e UFRJ, entre outras instituições públicas e privadas que ofereçam o curso e preparam para a carreira.</p>
+                </div>
+            </div>
+
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-pink-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">História e Destaques</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">A história da nutrição no Brasil começou a ganhar forma nas décadas de 1930 e 1940, com o estabelecimento do primeiro curso de nutrição na USP em 1939 e a regulamentação da profissão em 1967, pela lei n° 5.276/67, consolidada mais tarde pela lei nº 8.234/91.</p>
+                    <p class="text-lg mb-4">Eu indico a nutricionista Quesia Rodrigues, uma excelente profissional, a qual tivemos o privilégio de apreciar o seu belíssimo trabalho, no PSF do povoado de Matinha de Brito, ao qual resido.</p>
                 </div>
             </div>
         </section>
-
-    
-
+        
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-red-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-pink-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <ul class="list-disc list-inside space-y-4 text-lg">
-                        <li>
-                            [INFO], 2025. Disponível em: <a href="https://pt.wikipedia.org/wiki/[INFO]" target="_blank" class="text-blue-600 hover:underline">https://pt.wikipedia.org/wiki/Programador</a>. Acesso em: 31 ago. 2025.
-                        </li>
+                        <li class="break-words">[INFO], 2025. Disponível em: <a href="https://pt.wikipedia.org/wiki/Nutricionista" target="_blank" class="text-pink-600 hover:underline">https://pt.wikipedia.org/wiki/Nutricionista</a>. Acesso em: 31 ago. 2025.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card bg-green-600 rounded-2xl shadow-xl p-8 text-white">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
-                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                         <img src="https://i.ibb.co/GbzZMqB/Luma.jpg" alt="Luma" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
                         <i class="fas fa-user text-4xl" style="display: none;"></i>
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h2 class="text-3xl font-bold mb-4">Luma Silva Oliveira</h2>
                         <div class="space-y-3">
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-briefcase mr-2"></i>
-                                Apenas estudante
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-heart mr-2"></i>
-                                Gosta de ficar com sua família, ir para igreja, andar de bicicleta com minhas amigas, viajar, ouvir hinos, cantar, confeccionar antes...
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                Irecê, Bahia, Brasil
-                            </p>
+                            <p class="text-lg opacity-90"><i class="fas fa-graduation-cap mr-2 w-5 text-center"></i>Cursando informática no IFBA - Campus Irecê (1º INFO B)</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-briefcase mr-2 w-5 text-center"></i>Apenas estudante</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2 w-5 text-center"></i>Gosta de ficar com sua família, ir para igreja, andar de bicicleta com minhas amigas, viajar, ouvir hinos, cantar, confeccionar antes...</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-map-marker-alt mr-2 w-5 text-center"></i>Irecê, Bahia, Brasil</p>
                         </div>
                         <div class="flex justify-center md:justify-start space-x-4 mt-6">
                             <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
@@ -189,20 +201,20 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Wiki</h3>
-                    <p class="opacity-80">Um guia completo sobre o ...</p>
+                    <p class="opacity-80">Um guia completo sobre o Nutricionista</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Navegação</h3>
                     <ul class="space-y-2">
-                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">Descrição do Profissional</a></li>
-                        <li><a href="#historico" class="opacity-80 hover:opacity-100 transition duration-300">Dados Históricos</a></li>
-                        <li><a href="#carreira" class="opacity-80 hover:opacity-100 transition duration-300">Carreira</a></li>
+                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">Profissional</a></li>
+                        <li><a href="#referencias" class="opacity-80 hover:opacity-100 transition duration-300">Referências</a></li>
+                        <li><a href="#autor" class="opacity-80 hover:opacity-100 transition duration-300">Autor</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
                     <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
-                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-blue-300 hover:text-blue-200 transition duration-300">
+                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-pink-300 hover:text-pink-200 transition duration-300">
                         20251ireinfint0002@ifba.edu.br
                     </a>
                 </div>
@@ -213,7 +225,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-pink-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-pink-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
