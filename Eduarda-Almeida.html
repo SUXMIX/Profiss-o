@@ -10,10 +10,10 @@
         .wiki-content { max-width: 1200px; margin: 0 auto; }
         .section-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .section-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-        /* Cor do Tema: Teal */
-        .author-card { background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%); }
+        /* Cor do Tema: Vermelho (Substituído de Teal) */
+        .author-card { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); } /* Vermelho 500 para Vermelho 600 */
         .nav-link { position: relative; transition: color 0.3s ease; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #14b8a6; transition: width 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #dc2626; transition: width 0.3s ease; } /* Vermelho 600 */
         .nav-link:hover::after { width: 100%; }
         .back-to-top { position: fixed; bottom: 20px; right: 20px; opacity: 0; transition: opacity 0.3s ease; }
         .back-to-top.visible { opacity: 1; }
@@ -25,19 +25,19 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
                         <i class="fas fa-graduation-cap text-white text-xl"></i>
                     </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-teal-600">Início</a>
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-teal-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-teal-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-teal-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-teal-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-teal-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-teal-600">Autor</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-red-600">Início</a>
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-red-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-red-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-red-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-red-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-red-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-red-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600"><i class="fas fa-bars text-2xl"></i></button>
             </div>
@@ -53,13 +53,13 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-teal-500 to-teal-600 text-white py-20">
+    <section class="bg-gradient-to-r from-red-500 to-red-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Segurança Jurídica</h2>
             <p class="text-xl md:text-2xl opacity-90 mb-8">(Advocacia)</p>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Começar Leitura</a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-teal-600 transition duration-300">Conhecer Autora</a>
+                <a href="#profissional" class="bg-white text-red-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Começar Leitura</a>
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-red-600 transition duration-300">Conhecer Autora</a>
             </div>
         </div>
     </section>
@@ -68,8 +68,8 @@
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-teal-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-tie text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
@@ -80,8 +80,8 @@
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-teal-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
@@ -96,8 +96,8 @@
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-teal-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição da Carreira Profissional</h2>
                 </div>
@@ -116,8 +116,8 @@
         <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-teal-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
                 </div>
@@ -131,12 +131,10 @@
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+        <section id="desafios" class="mb-16"> <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-teal-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-exclamation-triangle text-red-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Desafios da Profissão</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
@@ -148,54 +146,48 @@
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+        <section id="tendencias" class="mb-16"> <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-teal-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-lightbulb text-red-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Tendências e Inovações</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Justiça digital e híbrida: audiências virtuais e atos eletrônicos como padrão institucional.  </p>
+                    <p class="text-lg mb-4">Justiça digital e híbrida: audiências virtuais e atos eletrônicos como padrão institucional.  </p>
                     <p class="text-lg mb-4">Proteção de Dados e Privacidade como área transversal (contratos, contencioso, consultivo).</p>
-                    <p class="text-lg mb-4">IA generativa e automação jurídica: diretrizes de uso responsável na prática profissional vêm sendo publicadas pela OAB.  </p>
+                    <p class="text-lg mb-4">IA generativa e automação jurídica: diretrizes de uso responsável na prática profissional vêm sendo publicadas pela OAB.  </p>
                     <p class="text-lg mb-4">Legal Operations e métricas de desempenho (KPIs), gestão de riscos e de litígios com suporte analítico.</p>
                     <p class="text-lg mb-4">ESG e Compliance: demanda por políticas anticorrupção, integridade e governança.</p>
                 </div>
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+        <section id="impacto" class="mb-16"> <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-teal-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-balance-scale text-red-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Impacto da Advocacia na Sociedade</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <p class="text-lg mb-4">Acesso à Justiça e tutela de direitos fundamentais; o advogado é indispensável à administração da Justiça. </p>
                     <p class="text-lg mb-4">Segurança jurídica e desenvolvimento econômico, por meio de contratos sólidos, prevenção de litígios e resolução eficiente de conflitos.</p>
-                    <p class="text-lg mb-4">Defesa da cidadania e das instituições democráticas, com atuação técnica e ética regulamentada pela OAB.  </p>
+                    <p class="text-lg mb-4">Defesa da cidadania e das instituições democráticas, com atuação técnica e ética regulamentada pela OAB.  </p>
                 </div>
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+        <section id="futuro" class="mb-16"> <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-teal-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-rocket text-red-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Futuro da Profissão</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">A profissão tende a permanecer altamente demandada, mas exigirá especialização, domínio tecnológico, governança de dados e ética aplicada. O domínio de práticas digitais, conformidade com a LGPD e uso responsável de IA serão diferenciais competitivos para escritórios e departamentos jurídicos.  </p>
+                    <p class="text-lg mb-4">A profissão tende a permanecer altamente demandada, mas exigirá especialização, domínio tecnológico, governança de dados e ética aplicada. O domínio de práticas digitais, conformidade com a LGPD e uso responsável de IA serão diferenciais competitivos para escritórios e departamentos jurídicos.  </p>
                     <p class="text-lg mb-4"><strong>Exemplos marcantes (Brasil, transformação digital e regulação):</strong></p>
                     <p class="text-lg mb-4">Resolução CNJ nº 354/2020: regulamentou audiências e atos processuais por videoconferência/telepresenciais no Judiciário, impulsionando a prática remota. </p>
-                    <p class="text-lg mb-4">Atualizações e consolidação: normativas correlatas reforçam diretrizes de cibersegurança e processos eletrônicos nos tribunais.  </p>
-                    <p class="text-lg mb-4">LGPD na advocacia: produção de guias e manuais setoriais para adequação de escritórios.  </p>
+                    <p class="text-lg mb-4">Atualizações e consolidação: normativas correlatas reforçam diretrizes de cibersegurança e processos eletrônicos nos tribunais.  </p>
+                    <p class="text-lg mb-4">LGPD na advocacia: produção de guias e manuais setoriais para adequação de escritórios.  </p>
                 </div>
             </div>
         </section>
@@ -203,8 +195,8 @@
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-teal-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
@@ -215,15 +207,14 @@
                         <li>CNJ — Resolução nº 354/2020 (texto ementado e PDF oficial). </li>
                         <li>CFOAB — LGPD e política de privacidade (aplicações à advocacia). </li>
                         <li>Diretrizes sobre IA Generativa na Prática Jurídica — CFOAB (2024). </li>
-                        <li>Guias de adequação à LGPD para escritórios (OAB Campinas, obras técnicas).</li>
+                        <li>Guias de adequação à LGPD para escritórios (OAB Campinas, obras técnicas).</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
-                <div class="flex flex-col md:flex-row items-center md:items-start">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white"> <div class="flex flex-col md:flex-row items-center md:items-start">
                     <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                         <img src="https://i.postimg.cc/zG41Ggdf/Eduarda-Pereira.jpg" alt="Retrato de Eduarda Pereira de Almeida Silva" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <i class="fas fa-user text-4xl text-white opacity-70" style="display: none;"></i>
@@ -233,7 +224,7 @@
                         <div class="space-y-3">
                             <p class="text-lg opacity-90"><i class="fas fa-graduation-cap mr-2"></i>Cursando informática no IFBA - Campus Irecê (1º INFO B)</p>
                             <p class="text-lg opacity-90"><i class="fas fa-briefcase mr-2"></i>Apenas estudante</p>
-                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2"></i>Apaixonada pela palavra, seja na forma de poesia, leitura ou debates. Participante do projeto FMUN, sonha em transformar sua paixão pela a fala e a justiça em uma carreira na advocacia</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2"></i>Apaixonada pela palavra, seja na forma de poesia, leitura ou debates. Participante do projeto FMUN, sonha em transformar sua paixão pela a fala e a justiça em uma carreira na advocacia</p>
                             <p class="text-lg opacity-90"><i class="fas fa-map-marker-alt mr-2"></i>Irecê, Bahia, Brasil</p>
                         </div>
                         <div class="flex justify-center md:justify-start space-x-4 mt-6">
@@ -269,7 +260,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-teal-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-teal-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-red-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
