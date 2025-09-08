@@ -18,10 +18,12 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        /* Cor do Tema: Verde */
-        /* Tailwind green-500: #22c55e; green-600: #16a34a */
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Rosa (Pink), atualizado a partir do card do index */
+        /* Tailwind pink-500: #ec4899; pink-600: #db2777 */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            /* Gradiente atualizado de verde para rosa */
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
         }
         .nav-link {
             position: relative;
@@ -34,7 +36,8 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            /* Cor do sublinhado atualizada de verde para rosa (pink-500) */
+            background-color: #ec4899;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -50,11 +53,10 @@
         .back-to-top.visible {
             opacity: 1;
         }
-        /* Correção para quebra de linha nas referências */
         #referencias .prose li {
             overflow-wrap: break-word;
             word-wrap: break-word;
-            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+            word-break: break-all;
         }
     </style>
 </head>
@@ -63,19 +65,19 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
                         <i class="fas fa-child text-white text-xl"></i>
                     </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-green-600">Início</a>
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-pink-600">Início</a>
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-pink-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-pink-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-pink-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-pink-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-pink-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-pink-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
@@ -93,14 +95,14 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-pink-500 to-pink-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Pediatra</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pink-600 transition duration-300">
                     Conhecer Autora
                 </a>
             </div>
@@ -111,8 +113,8 @@
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-md text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-md text-pink-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">O que faz um Pediatra?</h2>
                 </div>
@@ -130,8 +132,8 @@
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-pink-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
@@ -146,8 +148,8 @@
         <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-pink-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
@@ -162,8 +164,8 @@
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-chart-line text-pink-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Evolução do Profissional</h2>
                 </div>
@@ -185,8 +187,8 @@
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-pink-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
@@ -267,7 +269,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-pink-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-pink-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -311,6 +313,5 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-    </script>
-</body>
+    </script></body>
 </html>
