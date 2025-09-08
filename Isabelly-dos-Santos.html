@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Isabelly dos Santos Silva</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .wiki-content { max-width: 1200px; margin: 0 auto; }
-        .section-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .section-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-        /* Cor do Tema: Roxo (Substituído de Rose) */
-        .author-card { background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); } /* Purple 500 para Purple 600 */
-        .nav-link { position: relative; transition: color 0.3s ease; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #7c3aed; transition: width 0.3s ease; } /* Purple 600 */
-        .nav-link:hover::after { width: 100%; }
-        .back-to-top { position: fixed; bottom: 20px; right: 20px; opacity: 0; transition: opacity 0.3s ease; }
-        .back-to-top.visible { opacity: 1; }
-        #referencias .prose li { overflow-wrap: break-word; word-wrap: break-word; word-break: break-all; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - Pediatra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .wiki-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Cor do Tema: Verde */
+        /* Tailwind green-500: #22c55e; green-600: #16a34a */
+        .author-card {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color:#22c55e;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        /* Correção para quebra de linha nas referências */
+        #referencias .prose li {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+        }
+    </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
     <header class="bg-white shadow-lg">
