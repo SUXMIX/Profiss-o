@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - Tecnologia da Informação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .wiki-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Cor do Tema: Yellow */
+        /* Tailwind yellow-400: #facc15; yellow-500: #eab308; yellow-600: #ca8a04 */
+        .author-card {
+            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color:#facc15; /* Cor yellow-400 */
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        /* Correção para quebra de linha nas referências */
+        #referencias .prose li {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-microchip text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index" class="nav-link text-gray-600 hover:text-yellow-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-yellow-600">TI</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-yellow-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-yellow-600">Autor</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="index.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Início</a>
+                <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">TI</a>
+                <a href="#referencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Referências</a>
+                <a href="#autor" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Autor</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Medicina</h2>
+            <div class="flex justify-center space-x-4">
+                <a href="#profissional" class="bg-white text-yellow-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Começar Leitura
+                </a>
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-yellow-600 transition duration-300">
+                    Conhecer Autor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="wiki-content py-16 px-6">
+        <section id="profissional" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-laptop-code text-yellow-600 text-2xl"></i>
+                    </div>
+                        <h2 class="text-3xl font-bold text-gray-800">Por Que escolhi Esta Profissão?</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Olá, meu nome é Maria Lara, tenho 16 anos e quero fazer medicina porque é uma área que sempre me chamou bastante atenção. Para mim, a medicina representa muito mais do que apenas tratar doenças; ela simboliza cuidado, dedicação e a busca constante por salvar vidas.</p>
+                    <p class="text-lg mb-4">No Brasil, a medicina é vista como uma profissão de enorme responsabilidade e respeito. Os médicos muitas vezes enfrentam desafios grandes, como a falta de estrutura em hospitais e a sobrecarga de trabalho, mas mesmo assim continuam sendo peças fundamentais na sociedade. A população deposita muita confiança nesses profissionais, pois eles estão sempre na linha de frente, principalmente em momentos difíceis, como vimos durante a pandemia.</p>
+                    <p class="text-lg mb-4">No mundo, a medicina também é valorizada e respeitada, mas há realidades diferentes. Em alguns países, a tecnologia e os recursos avançados permitem tratamentos de ponta, enquanto em outros a luta ainda é pelo básico, como acesso a consultas e medicamentos. Apesar dessas diferenças, em qualquer lugar do planeta, a medicina é vista como uma área essencial, capaz de transformar vidas e dar esperança às pessoas.</p>
+                    <p class="text-lg mb-4">Para mim, pensar em seguir essa carreira é pensar em fazer parte de algo maior, que ultrapassa fronteiras e culturas: o cuidado humano. A medicina é um caminho de estudo, dedicação e amor ao próximo, e é exatamente isso que mim inspira.</p>
+            </div>
+        </section>
+        
+        <section id="referencias" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <ul class="list-disc list-inside space-y-4 text-lg">
+                        <li>
+                            ...
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="autor" class="mb-16">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                        <img src="https://i.ibb.co/BVPZtNsM/Maria.jpg" alt="Maria Lara" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
+                        <i class="fas fa-user text-4xl" style="display: none;"></i>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl font-bold mb-4">Maria Lara Amorim Alves</h2>
+                        <div class="space-y-3">
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-graduation-cap mr-2"></i>
+                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-briefcase mr-2"></i>
+                                Apenas estudante
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-heart mr-2"></i>
+                                Eu gosto muito da área de pediatra, até por que eu acho que seria uma função maravilhosa, sou apaixonada por crianças e acho que essa função seria muito útil na minha carreira
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                Irecê, Bahia, Brasil
+                            </p>
+                        </div>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                            <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Wiki</h3>
+                    <p class="opacity-80">Um guia completo sobre Medicina</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Navegação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">TI</a></li>
+                        <li><a href="#referencias" class="opacity-80 hover:opacity-100 transition duration-300">Referências</a></li>
+                        <li><a href="#autor" class="opacity-80 hover:opacity-100 transition duration-300">Autor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
+                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-blue-300 hover:text-yellow-200 transition duration-300">
+                        20251ireinfint0002@ifba.edu.br
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="opacity-70">© 2025 Wiki. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top bg-yellow-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
