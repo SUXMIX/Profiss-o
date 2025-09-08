@@ -1,384 +1,386 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Terapia Ocupacional</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .wiki-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        /* Cor do Tema: Blue */
-        /* Tailwind blue-500: #3b82f6; blue-600: #2563eb */
-        .author-card {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-        }
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color:#3b82f6; /* Cor blue-500 */
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .back-to-top.visible {
-            opacity: 1;
-        }
-        /* Correção para quebra de linha nas referências */
-        #referencias .prose li {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-all; /* Força a quebra de texto para evitar overflow */
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - Escolha de profissões</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .wiki-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Roxo (Purple), atualizado a partir do card do index */
+        /* Tailwind purple-500: #8b5cf6; purple-600: #7c3aed */
+        .author-card {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color:#8b5cf6; /* Cor do sublinhado atualizada para purple-500 */
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+        }
+        /* Correção para quebra de linha nas referências */
+        #referencias .prose li {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+        }
+    </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
-    <header class="bg-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-hands-helping text-white text-xl"></i>
-                    </div>
-                    <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
-                </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-blue-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-blue-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-blue-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-blue-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-blue-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-blue-600">Autor</a>
-                </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-600">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="index.html" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Início</a>
-                <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Profissional</a>
-                <a href="#historico" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Histórico</a>
-                <a href="#carreira" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Carreira</a>
-                <a href="#formacao" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Formação</a>
-                <a href="#referencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Referências</a>
-                <a href="#autor" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Autor</a>
-            </div>
-        </div>
-    </header>
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index" class="nav-link text-gray-600 hover:text-purple-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-purple-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-purple-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-purple-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-purple-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-purple-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-purple-600">Autor</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="index" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Início</a>
+                <a href="#profissional" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Profissional</a>
+                <a href="#historico" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Histórico</a>
+                <a href="#carreira" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Carreira</a>
+                <a href="#formacao" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Formação</a>
+                <a href="#referencias" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Referências</a>
+                <a href="#autor" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Autor</a>
+            </div>
+        </div>
+    </header>
 
-    <section class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Terapia Ocupacional</h2>
-            <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
-                    Começar Leitura
-                </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
-                    Conhecer Autor
-                </a>
-            </div>
-        </div>
-    </section>
+    <section class="bg-gradient-to-r from-purple-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Terapia Ocupacional</h2>
+            <div class="flex justify-center space-x-4">
+                <a href="#profissional" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Começar Leitura
+                </a>
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300">
+                    Conhecer Autor
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <main class="wiki-content py-16 px-6">
-        <section id="profissional" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">O terapeuta ocupacional promove, previne, trata e reabilita pessoas em suas atividades diárias, buscando autonomia, qualidade de vida e inclusão social. Ele avalia capacidades motoras, cognitivas, sensoriais e sociais, elabora intervenções personalizadas e adapta ambientes e recursos para facilitar a participação.</p>
-                </div>
-            </div>
-        </section>
+    <main class="wiki-content py-16 px-6">
+        <section id="profissional" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-tie text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">O terapeuta ocupacional promove, previne, trata e reabilita pessoas em suas atividades diárias, buscando autonomia, qualidade de vida e inclusão social. Ele avalia capacidades motoras, cognitivas, sensoriais e sociais, elabora intervenções personalizadas e adapta ambientes e recursos para facilitar a participação.</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="formacao" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Áreas de Atuação</h2>
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Saúde mental</p>
-                    <p class="text-lg mb-4">Reabilitação física</p>
-                    <p class="text-lg mb-4">Pediatria</p>
-                    <p class="text-lg mb-4">Geriatria</p>
-                    <p class="text-lg mb-4">Contexto escolar</p>
-                    <p class="text-lg mb-4">Saúde da família</p>
-                    <p class="text-lg mb-4">Contexto social</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="carreira" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Pré-Requisitos Para ser Profissional</h2>
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Graduação em Terapia Ocupacional (duração média de 4 anos, modalidade presencial).</p>
-                    <p class="text-lg mb-4">Registro no CREFITO.</p>
-                    <p class="text-lg mb-4">Competências como empatia, criatividade, comunicação, capacidade de adaptação e trabalho em equipe.</p>
-                    <p class="text-lg mb-4">Estágios supervisionados e formação complementar (cursos, especializações, mestrado/doutorado e atualização contínua).</p>
-                </div>
-            </div>
-        </section>
+        <section id="formacao" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Áreas de Atuação</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Saúde mental</p>
+                    <p class="text-lg mb-4">Reabilitação física</p>
+                    <p class="text-lg mb-4">Pediatria</p>
+                    <p class="text-lg mb-4">Geriatria</p>
+                    <p class="text-lg mb-4">Contexto escolar</p>
+                    <p class="text-lg mb-4">Saúde da família</p>
+                    <p class="text-lg mb-4">Contexto social</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="carreira" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Pré-Requisitos Para ser Profissional</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Graduação em Terapia Ocupacional (duração média de 4 anos, modalidade presencial).</p>
+                    <p class="text-lg mb-4">Registro no CREFITO.</p>
+                    <p class="text-lg mb-4">Competências como empatia, criatividade, comunicação, capacidade de adaptação e trabalho em equipe.</p>
+                    <p class="text-lg mb-4">Estágios supervisionados e formação complementar (cursos, especializações, mestrado/doutorado e atualização contínua).</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="informacoes-adicionais" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-info-circle text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Informações Adicionais</h2>
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4"><strong>Instituições de ensino:</strong></p>
-                    <p class="text-lg mb-4">USP, Unifesp, UFSCar, UFRJ, Unesp, Anhembi Morumbi, Estácio, São Judas, FMU, Unisa, PUC-Campinas, entre outras.</p>
-                    <p class="text-lg mb-4"><strong>Locais de Atuação:</strong></p>
-                    <p class="text-lg mb-4">Hospitais, clínicas, CAPS, UBS, escolas, lares de idosos, empresas, presídios, atendimento domiciliar e clínicas próprias.</p>
-                    <p class="text-lg mb-4"><strong>Profissionais de destaque:</strong></p>
-                    <p class="text-lg mb-4">William Rush Dunton Jr. (pai da TO), Eleonor Clark Slagle, George Barton, Elisabeth Casson, além de brasileiros como Marta Sampaio, Nicole Guarany e Mirela de Oliveira Figueiredo.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="historico" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Surgiu no final do século XIX/início do XX, ligado às artes e ofícios para tratar transtornos mentais.</p>
-                    <p class="text-lg mb-4">Ganhou força na Primeira Guerra Mundial com a reabilitação de soldados.</p>
-                    <p class="text-lg mb-4">Chegou ao Brasil na década de 1950; reconhecida como profissão de nível superior em 1969.</p>
-                    <p class="text-lg mb-4">COFFITO e CREFITOs criados em 1975 para fiscalização profissional</p>
-                </div>
-            </div>
-        </section>
+        <section id="carreira" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Informações Adicionais</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4"><strong>Instituições de ensino:</strong></p>
+                    <p class="text-lg mb-4">USP, Unifesp, UFSCar, UFRJ, Unesp, Anhembi Morumbi, Estácio, São Judas, FMU, Unisa, PUC-Campinas, entre outras.</p>
+                    <p class="text-lg mb-4"><strong>Locais de Atuação:</strong></p>
+                    <p class="text-lg mb-4">Hospitais, clínicas, CAPS, UBS, escolas, lares de idosos, empresas, presídios, atendimento domiciliar e clínicas próprias.</p>
+                    <p class="text-lg mb-4"><strong>Profissionais de destaque:</strong></p>
+                    <p class="text-lg mb-4">William Rush Dunton Jr. (pai da TO), Eleonor Clark Slagle, George Barton, Elisabeth Casson, além de brasileiros como Marta Sampaio, Nicole Guarany e Mirela de Oliveira Figueiredo.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="historico" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Surgiu no final do século XIX/início do XX, ligado às artes e ofícios para tratar transtornos mentais.</p>
+                    <p class="text-lg mb-4">Ganhou força na Primeira Guerra Mundial com a reabilitação de soldados.</p>
+                    <p class="text-lg mb-4">Chegou ao Brasil na década de 1950; reconhecida como profissão de nível superior em 1969.</p>
+                    <p class="text-lg mb-4">COFFITO e CREFITOs criados em 1975 para fiscalização profissional</p>
+                </div>
+            </div>
+        </section>
 
-        <section id="imagens" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-images text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Algumas Imagens</h2>
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://i.postimg.cc/tsx6mLc0/IMG-20250906-WA0050.jpg" alt="Terapeuta Ocupacional 1" class="w-100 rounded-2xl" onerror="this.style.display='none'"> 
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://i.postimg.cc/64q2VSZm/IMG-20250906-WA0049.jpg" alt="Terapeuta Ocupacional 2" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://i.postimg.cc/wy6sM3jH/IMG-20250906-WA0054.jpg" alt="Terapeuta Ocupacional 3" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://i.postimg.cc/mhgHGcny/IMG-20250906-WA0055.jpg" alt="Terapeuta Ocupacional 4" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-            </div>
-        </section>
-        
-        <section id="referencias" class="mb-16">
-            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-blue-600 text-2xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <ul class="list-disc list-inside space-y-4 text-lg">
-                        <li>
-                            MEC. <a href="https://portal.mec.gov.br" target="_blank" class="text-blue-600 hover:underline">https://portal.mec.gov.br</a>.
-                        </li>
-                        <li>
-                            Uninter. <a href="https://www.uninter.com" target="_blank" class="text-blue-600 hover:underline">https://www.uninter.com</a>.
-                        </li>
-                        <li>
-                            COFFITO. <a href="https://www.coffito.gov.br" target="_blank" class="text-blue-600 hover:underline">https://www.coffito.gov.br</a>.
-                        </li>
-                        <li>
-                            UFSM. <a href="https://www.ufsm.br" target="_blank" class="text-blue-600 hover:underline">https://www.ufsm.br</a>.
-                        </li>
-                        <li>
-                            Quero Bolsa. <a href="https://querobolsa.com.br" target="_blank" class="text-blue-600 hover:underline">https://querobolsa.com.br</a>.
-                        </li>
-                        <li>
-                            Indeed. <a href="https://br.indeed.com" target="_blank" class="text-blue-600 hover:underline">https://br.indeed.com</a>.
-                        </li>
-                        <li>
-                            You tube• TV Unesp. <a href="https://www.youtube.com" target="_blank" class="text-blue-600 hover:underline">https://www.youtube.com</a>.
-                        </li>
-                        <li>
-                            UniFECAF. <a href="https://www.unifecaf.com.br" target="_blank" class="text-blue-600 hover:underline">https://www.unifecaf.com.br</a>.
-                        </li>
-                        <li>
-                            Afya. <a href="https://graduacao.afya.com.br" target="_blank" class="text-blue-600 hover:underline">https://graduacao.afya.com.br</a>.
-                        </li>
-                        <li>
-                            Braz Cubas. <a href="https://cursos.brazcubas.edu.br" target="_blank" class="text-blue-600 hover:underline">https://cursos.brazcubas.edu.br</a>.
-                        </li>
-                        <li>
-                            Nova Concursos. <a href="https://www.novaconcursos.com.br" target="_blank" class="text-blue-600 hover:underline">https://www.novaconcursos.com.br</a>.
-                        </li>
-                        <li>
-                            Uniasselvi. <a href="https://portal.uniasselvi.com.br" target="_blank" class="text-blue-600 hover:underline">https://portal.uniasselvi.com.br</a>.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <section id="historico" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-image text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Algumas Imagens</h2>
+                </div>
+                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="https://i.postimg.cc/tsx6mLc0/IMG-20250906-WA0050.jpg" alt="Laura" class="w-100 rounded-2xl" onerror="this.style.display='none'"> 
+                </div>
+                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="https://i.postimg.cc/64q2VSZm/IMG-20250906-WA0049.jpg" alt="Laura" class="w-100 rounded-2xl" onerror="this.style.display='none'">
+                </div>
+                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="https://i.postimg.cc/wy6sM3jH/IMG-20250906-WA0054.jpg" alt="Laura" class="w-100 rounded-2xl" onerror="this.style.display='none'">
+                </div>
+                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <img src="https://i.postimg.cc/mhgHGcny/IMG-20250906-WA0055.jpg" alt="Laura" class="w-100 rounded-2xl" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+        
+        <section id="referencias" class="mb-16">
+            <div class="section-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-purple-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <ul class="list-disc list-inside space-y-4 text-lg">
+                        <li>
+                            MEC. <a href="https://portal.mec.gov.br" target="_blank" class="text-purple-600 hover:underline">https://portal.mec.gov.br</a>.
+                        </li>
+                        <li>
+                            Uninter. <a href="https://www.uninter.com" target="_blank" class="text-purple-600 hover:underline">https://www.uninter.com</a>.
+                        </li>
+                        <li>
+                            COFFITO. <a href="https://www.coffito.gov.br" target="_blank" class="text-purple-600 hover:underline">https://www.coffito.gov.br</a>.
+                        </li>
+                        <li>
+                            UFSM. <a href="https://www.ufsm.br" target="_blank" class="text-purple-600 hover:underline">https://www.ufsm.br</a>.
+                        </li>
+                        <li>
+                            Quero Bolsa. <a href="https://querobolsa.com.br" target="_blank" class="text-purple-600 hover:underline">https://querobolsa.com.br</a>.
+                        </li>
+                        <li>
+                            Indeed. <a href="https://br.indeed.com" target="_blank" class="text-purple-600 hover:underline">https://br.indeed.com</a>.
+                        </li>
+                        <li>
+                            You tube• TV Unesp. <a href="https://www.youtube.com" target="_blank" class="text-purple-600 hover:underline">https://www.youtube.com</a>.
+                        </li>
+                        <li>
+                            UniFECAF. <a href="https://www.unifecaf.com.br" target="_blank" class="text-purple-600 hover:underline">https://www.unifecaf.com.br</a>.
+                        </li>
+                        <li>
+                            Afya. <a href="https://graduação.afya.com.br" target="_blank" class="text-purple-600 hover:underline">https://graduação.afya.com.br</a>.
+                        </li>
+                        <li>
+                            Braz Cubas. <a href="https://cursos.brazcubas.edu.br" target="_blank" class="text-purple-600 hover:underline">https://cursos.brazcubas.edu.br</a>.
+                        </li>
+                        <li>
+                            Nova Concursos. <a href="https://www.novaconcursos.com.br" target="_blank" class="text-purple-600 hover:underline">https://www.novaconcursos.com.br</a>.
+                        </li>
+                        <li>
+                            Uniasselvi. <a href="https://portal.uniasselvi.com.br" target="_blank" class="text-purple-600 hover:underline">https://portal.uniasselvi.com.br</a>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <section id="autor" class="mb-16">
-            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
-                <div class="flex flex-col md:flex-row items-center md:items-start">
-                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
-                        <img src="https://i.postimg.cc/N0zbCt5n/Lorrany.jpg" alt="Retrato profissional de Lorrany Nascimento Rocha - jovem profissional com trajes formais, sorrindo levemente em fundo neutro" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
-                        <i class="fas fa-user text-4xl" style="display: none;"></i>
-                    </div>
-                    <div class="flex-1 text-center md:text-left">
-                        <h2 class="text-3xl font-bold mb-4">Lorrany Nascimento Rocha</h2>
-                        <div class="space-y-3">
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-briefcase mr-2"></i>
-                                Apenas estudante
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-heart mr-2"></i>
-                                Gosta de crianças e da forma espontânea como elas enxergam o mundo, nelas encontra inspiração, leveza, criatividade e esperança. Também gosta de cuidar e ajudar aqueles que precisam, e encontra alegria em praticar esportes, jardinagem, além de aprender e fazer novas receitas.
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                Irecê, Bahia, Brasil
-                            </p>
-                        </div>
-                        <div class="flex justify-center md:justify-start space-x-4 mt-6">
-                            <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <section id="autor" class="mb-16">
+            <div class="author-card bg-purple-600 rounded-2xl shadow-xl p-8 text-white">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                        <img src="https://i.postimg.cc/N0zbCt5n/Lorrany.jpg" alt="Retrato profissional de Lucas Lima Barbosa - jovem profissional com trajes formais, sorrindo levemente em fundo neutro" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
+                        <i class="fas fa-user text-4xl" style="display: none;"></i>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl font-bold mb-4">Lorrany Nascimento Rocha</h2>
+                        <div class="space-y-3">
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-graduation-cap mr-2"></i>
+                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-briefcase mr-2"></i>
+                                Apenas estudante
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-heart mr-2"></i>
+                                Gosta de crianças e da forma espontânea como elas enxergam o mundo, nelas encontra inspiração, leveza, criatividade e esperança. Também gosta de cuidar e ajudar aqueles que precisam, e encontra alegria em praticar esportes, jardinagem, além de aprender e fazer novas receitas.
+                            </p>
+                            <p class="text-lg opacity-90">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                Irecê, Bahia, Brasil
+                            </p>
+                        </div>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                            <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Wiki</h3>
-                    <p class="opacity-80">Um guia completo sobre Terapia Ocupacional</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Navegação</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">Descrição do Profissional</a></li>
-                        <li><a href="#historico" class="opacity-80 hover:opacity-100 transition duration-300">Dados Históricos</a></li>
-                        <li><a href="#carreira" class="opacity-80 hover:opacity-100 transition duration-300">Carreira</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contato</h3>
-                    <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
-                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-blue-300 hover:text-blue-200 transition duration-300">
-                        20251ireinfint0002@ifba.edu.br
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="opacity-70">© 2025 Wiki. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Wiki</h3>
+                    <p class="opacity-80">Um guia completo sobre Terapia Ocupacional</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Navegação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#profissional" class="opacity-80 hover:opacity-100 transition duration-300">Descrição do Profissional</a></li>
+                        <li><a href="#historico" class="opacity-80 hover:opacity-100 transition duration-300">Dados Históricos</a></li>
+                        <li><a href="#carreira" class="opacity-80 hover:opacity-100 transition duration-300">Carreira</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
+                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-purple-300 hover:text-purple-200 transition duration-300">
+                        20251ireinfint0002@ifba.edu.br
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="opacity-70">© 2025 Wiki. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <button id="backToTop" class="back-to-top bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <button id="backToTop" class="back-to-top bg-purple-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-purple-700 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
 
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
