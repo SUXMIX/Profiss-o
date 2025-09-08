@@ -18,8 +18,12 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Azul (Blue), atualizado a partir do card do index */
+        /* Tailwind blue-500: #3b82f6; blue-600: #2563eb */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            /* Gradiente atualizado de verde para azul */
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
         }
         .nav-link {
             position: relative;
@@ -32,7 +36,8 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            /* Cor do sublinhado atualizada de verde para azul (blue-500) */
+            background-color:#3b82f6;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -61,19 +66,19 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
                         <i class="fas fa-graduation-cap text-white text-xl"></i>
                     </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index" class="nav-link text-gray-600 hover:text-green-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index" class="nav-link text-gray-600 hover:text-blue-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-blue-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-blue-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-blue-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-blue-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-blue-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-blue-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
@@ -91,14 +96,14 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Estilista</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
                     Conhecer Autora
                 </a>
             </div>
@@ -116,7 +121,7 @@
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <p class="text-lg mb-4">Um estilista desempenha um papel central e criativo na indústria da moda, sendo responsável por conceber e criar peças de vestuário, acessórios e até mesmo coleções completas que refletem sua visão artística e as tendências atuais,busca entender o estilo e as preferências dos clientes, e propor soluções criativas e inovadoras.
-O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um processo abrangente de pesquisa, criação e coordenação.</p>
+O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um processo abrangente de pesquisa, criação e coordenação.</p>
                 </div>
             </div>
         </section>
@@ -124,14 +129,14 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">A profissão de estilista tem raízes na Alta Costura do século XIX, com Charles Frederick Worth sendo considerado o primeiro estilista da história, responsável por criar coleções sazonais e apresentar propostas próprias de moda. O termo "estilista" surgiu nos anos 1960, vindo do francês styliste, para definir o profissional que trabalha na indústria de moda, interpretando tendências,propondo conceitos e criando modelos para a indústria. mas a profissão evoluiu significativamente, com figuras como Coco Chanel e Christian Dior redefinindo a moda feminina. A partir do século XX, a profissão expandiu-se para incluir o prêt-à-porter e a previsão de tendências, e hoje abrange áreas como marketing, sustentabilidade e moda digital, acompanhando as mudanças sociais e tecnológicas.</p>
-                    <p class="text-lg mb-4">A carreira de estilista envolve a criação e desenvolvimento de coleções de moda, desde a pesquisa de tendências e conceitos até o desenho de peças, a elaboração de protótipos e a supervisão da produção de roupas, calçados e acessórios para marcas de vestuário ou para o mercado em geral. O estilista atua de forma abrangente, integrando fatores estéticos, simbólicos, ergonômicos, socioculturais e sustentáveis no processo criativo, utilizando técnicas como croquis, fichas técnicas e portfólios para apresentar suas ideias e viabilizar a fabricação. 
+                    <p class="text-lg mb-4">A profissão de estilista tem raízes na Alta Costura do século XIX, com Charles Frederick Worth sendo considerado o primeiro estilista da história, responsável por criar coleções sazonais e apresentar propostas próprias de moda. O termo "estilista" surgiu nos anos 1960, vindo do francês styliste, para definir o profissional que trabalha na indústria de moda, interpretando tendências,propondo conceitos e criando modelos para a indústria. mas a profissão evoluiu significativamente, com figuras como Coco Chanel e Christian Dior redefinindo a moda feminina. A partir do século XX, a profissão expandiu-se para incluir o prêt-à-porter e a previsão de tendências, e hoje abrange áreas como marketing, sustentabilidade e moda digital, acompanhando as mudanças sociais e tecnológicas.</p>
+                    <p class="text-lg mb-4">A carreira de estilista envolve a criação e desenvolvimento de coleções de moda, desde a pesquisa de tendências e conceitos até o desenho de peças, a elaboração de protótipos e a supervisão da produção de roupas, calçados e acessórios para marcas de vestuário ou para o mercado em general. O estilista atua de forma abrangente, integrando fatores estéticos, simbólicos, ergonômicos, socioculturais e sustentáveis no processo criativo, utilizando técnicas como croquis, fichas técnicas e portfólios para apresentar suas ideias e viabilizar a fabricação. 
 </p>
                 </div>
             </div>
@@ -140,8 +145,8 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Áreas de Atuação e Desenvolvimento da Carreira</h2>
                 </div>
@@ -150,7 +155,7 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
                     <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
                         <li><strong>Moda:</strong> Criação para marcas de vestuário, calçados e acessórios.</li>
                         <li><strong>Produção de Eventos:</strong> Organização de desfiles, editoriais e campanhas.</li>
-                        <li><strong>Marketing e Comunicação de Moda:</strong> Trabalho em vitrines e estandes.</li>
+                        <li><strong>Marketing e Comunicação de Moda:</strong> Trabalho em vitrines e estandes.</li>
                     </ul>
                 </div>
             </div>
@@ -159,8 +164,8 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
         <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Perspectivas Para a Profissão</h2>
                 </div>
@@ -175,7 +180,7 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
                     <p class="text-lg mb-4">- Sustentabilidade e Artesanato: O uso de materiais sustentáveis e técnicas artesanais ganha força, agregando valor às peças e produtos. </p>
                     <p class="text-lg mb-4">- Criação de Nichos de Mercado: A especialização em segmentos específicos da moda, como moda para terceira idade, fitness ou gestantes, abre novas portas para estilistas. </p>
                     <p class="text-lg mb-4">- Foco na Venda Online: A utilização de plataformas virtuais para a venda de produtos é uma tendência crescente que atinge novos clientes e impulsiona o mercado. </p>
-                    <p class="text-lg mb-4">- Crescimento do Mercado de Acessórios: O segmento de acessórios de moda (bolsas, calçados, joias) também demonstra um crescimento significativo, oferecendo mais oportunidades de trabalho.</p>
+                    <p class="text-lg mb-4">- Crescimento do Mercado de Acessórios: O segmento de acessórios de moda (bolsas, calçados, joias) também demonstra um crescimento significativo, oferecendo mais oportunidades de trabalho.</p>
                 </div>
             </div>
         </section>
@@ -183,8 +188,8 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-red-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-blue-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
@@ -199,7 +204,7 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card bg-green-600 rounded-2xl shadow-xl p-8 text-white">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
                     <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
                         <img src="https://i.postimg.cc/QdYrMkG2/Isla.jpg" alt="Isla" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
@@ -218,7 +223,7 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
                             </p>
                             <p class="text-lg opacity-90">
                                 <i class="fas fa-heart mr-2"></i>
-                                Gosta de assistir filmes e séries, montar looks, ouvir música e jogar no celular.
+                                Gosta de assistir filmes e séries, montar looks, ouvir música e jogar no celular.
                             </p>
                             <p class="text-lg opacity-90">
                                 <i class="fas fa-map-marker-alt mr-2"></i>
@@ -265,7 +270,7 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -312,4 +317,3 @@ O trabalho de um estilista vai além de simplesmente desenhar roupas; envolve um
     </script>
 </body>
 </html>
-
