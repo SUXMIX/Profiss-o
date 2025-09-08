@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Escolha de profissões</title>
+    <title>Wiki - Zootecnista</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,8 +18,11 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Índigo (Indigo), atualizado a partir do card do index */
+        /* Tailwind indigo-500: #6366f1; indigo-600: #4f46e5 */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
         }
         .nav-link {
             position: relative;
@@ -32,7 +35,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            background-color: #6366f1; /* Cor do sublinhado atualizada para indigo-500 */
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -48,11 +51,10 @@
         .back-to-top.visible {
             opacity: 1;
         }
-        /* Correção para quebra de linha nas referências */
         #referencias .prose li {
             overflow-wrap: break-word;
             word-wrap: break-word;
-            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+            word-break: break-all;
         }
     </style>
 </head>
@@ -61,19 +63,18 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-paw text-white text-xl"></i> </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index" class="nav-link text-gray-600 hover:text-green-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index" class="nav-link text-gray-600 hover:text-indigo-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-indigo-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-indigo-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-indigo-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-indigo-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-indigo-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-indigo-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
@@ -91,14 +92,14 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Zootecnista</h2>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
                     Conhecer Autor
                 </a>
             </div>
@@ -109,8 +110,8 @@
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-tie text-indigo-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
@@ -123,8 +124,8 @@
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-indigo-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
@@ -133,7 +134,6 @@
                     <p class="text-lg mb-4">No Brasil, o primeiro curso de Zootecnia foi criado em 1966, na Universidade Federal Rural de Pernambuco (UFRPE).</p>
                     <p class="text-lg mb-4">A profissão foi regulamentada pela Lei nº 5.550, de 1968.</p>
                     <p class="text-lg mb-4">Hoje, a Zootecnia é reconhecida pelo Conselho Federal de Medicina Veterinária (CFMV), com conselhos regionais que fiscalizam a atuação profissional.</p>
-                
                 </div>
             </div>
         </section>
@@ -141,171 +141,152 @@
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-indigo-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição da Carreira Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Atribuições: Planejamento da produção animal; Nutrição e formulação de rações; Melhoramento genético; Manejo reprodutivo; Controle de qualidade de produtos de origem animal; Bem-estar animal e sustentabilidade; Gestão agropecuária e administração de fazendas.</p>
-                    <p class="text-lg mb-4">Áreas de Atuação: Pecuária de corte e leite; Avicultura; Suinocultura; Piscicultura e aquicultura; Ovinocaprinocultura; Equinocultura; Animais silvestres em cativeiro; Consultoria ambiental e produção sustentável. </p>
+                    <p class="text-lg mb-4"><strong>Atribuições:</strong> Planejamento da produção animal; Nutrição e formulação de rações; Melhoramento genético; Manejo reprodutivo; Controle de qualidade de produtos de origem animal; Bem-estar animal e sustentabilidade; Gestão agropecuária e administração de fazendas.</p>
+                    <p class="text-lg mb-4"><strong>Áreas de Atuação:</strong> Pecuária de corte e leite; Avicultura; Suinocultura; Piscicultura e aquicultura; Ovinocaprinocultura; Equinocultura; Animais silvestres em cativeiro; Consultoria ambiental e produção sustentável. </p>
+                </div>
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
+        <section id="formacao" class="mb-16 space-y-8">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-indigo-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Processo de Formação Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Pre-Requisitos:</p>
-                    <p class="text-lg mb-4">- Ensino médio completo.</p>
-                    <p class="text-lg mb-4">- Aprovação em vestibular ou ENEM.</p>
-                    <p class="text-lg mb-4">Formação:</p>
-                    <p class="text-lg mb-4">- Graduação em Zootecnia (duração média de 5 anos).</p>
-                    <p class="text-lg mb-4">- Possibilidade de atuação após registro no CRMV (Conselho Regional de Medicina Veterinária).</p>
-                    <p class="text-lg mb-4">Estágios:</p>
-                    <p class="text-lg mb-4">- Obrigatórios durante a graduação.</p>
-                    <p class="text-lg mb-4">- Realizados em fazendas, laboratórios de nutrição, centros de pesquisa, frigoríficos ou consultorias.</p>
-                    <p class="text-lg mb-4">Especializações e Aperfeiçoamento:</p>
-                    <p class="text-lg mb-4">- Pós-graduação (mestrado e doutorado) em nutrição animal, genética, produção de ruminantes, monogástricos, aquicultura, gestão ambiental, entre outras.</p>
-                    <p class="text-lg mb-4">- Cursos de curta duração sobre reprodução assistida, formulação de rações, softwares de gestão agropecuária etc.</p>
-                    <p class="text-lg mb-4">Instituições de Ensino:</p>
-                    <p class="text-lg mb-4">- UFRPE – Universidade Federal Rural de Pernambuco (primeira do Brasil).</p>
-                    <p class="text-lg mb-4">- UNESP – Universidade Estadual Paulista (Jaboticabal).</p>
-                    <p class="text-lg mb-4">- UFV – Universidade Federal de Viçosa (MG).</p>
-                    <p class="text-lg mb-4">- UFSM – Universidade Federal de Santa Maria (RS).</p>
-                    <p class="text-lg mb-4">- UFG – Universidade Federal de Goiás.</p>
-                    <p class="text-lg mb-4">- UFRGS – Universidade Federal do Rio Grande do Sul.</p>
+                    <p class="text-lg mb-2 font-semibold">Pre-Requisitos:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Ensino médio completo.</li>
+                        <li>Aprovação em vestibular ou ENEM.</li>
+                    </ul>
+                    <p class="text-lg mb-2 font-semibold">Formação:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Graduação em Zootecnia (duração média de 5 anos).</li>
+                        <li>Possibilidade de atuação após registro no CRMV (Conselho Regional de Medicina Veterinária).</li>
+                    </ul>
+                    <p class="text-lg mb-2 font-semibold">Estágios:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Obrigatórios durante a graduação.</li>
+                        <li>Realizados em fazendas, laboratórios de nutrição, centros de pesquisa, frigoríficos ou consultorias.</li>
+                    </ul>
+                    <p class="text-lg mb-2 font-semibold">Especializações e Aperfeiçoamento:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Pós-graduação (mestrado e doutorado) em nutrição animal, genética, produção de ruminantes, monogástricos, aquicultura, gestão ambiental, entre outras.</li>
+                        <li>Cursos de curta duração sobre reprodução assistida, formulação de rações, softwares de gestão agropecuária etc.</li>
+                    </ul>
+                    <p class="text-lg mb-2 font-semibold">Instituições de Ensino de Destaque:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>UFRPE – Universidade Federal Rural de Pernambuco (primeira do Brasil).</li>
+                        <li>UNESP – Universidade Estadual Paulista (Jaboticabal).</li>
+                        <li>UFV – Universidade Federal de Viçosa (MG).</li>
+                        <li>UFSM – Universidade Federal de Santa Maria (RS).</li>
+                        <li>UFG – Universidade Federal de Goiás.</li>
+                        <li>UFRGS – Universidade Federal do Rio Grande do Sul.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-building text-indigo-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Espaços de Atuação Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Empresas privadas: cooperativas agropecuárias, frigoríficos, laticínios, fábricas de ração, consultorias de gestão rural.</p>
-                    <p class="text-lg mb-4">Instituições públicas: órgãos como EMBRAPA, Secretarias de Agricultura, institutos de pesquisa e extensão rural.</p>
-                    <p class="text-lg mb-4">ONGs e projetos ambientais: manejo sustentável e preservação de espécies.</p>
-                    <p class="text-lg mb-4">Autônomos: consultoria em fazendas, projetos de melhoramento, auditoria de bem-estar animal.</p>
+                     <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Empresas privadas: cooperativas agropecuárias, frigoríficos, laticínios, fábricas de ração, consultorias de gestão rural.</li>
+                        <li>Instituições públicas: órgãos como EMBRAPA, Secretarias de Agricultura, institutos de pesquisa e extensão rural.</li>
+                        <li>ONGs e projetos ambientais: manejo sustentável e preservação de espécies.</li>
+                        <li>Autônomos: consultoria em fazendas, projetos de melhoramento, auditoria de bem-estar animal.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-award text-indigo-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Profissionais de Destaque</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Francisco Antônio Macedo Costa – um dos pioneiros na implantação do curso de Zootecnia no Brasil.</p>
-                    <p class="text-lg mb-4">Pesquisadores da EMBRAPA que atuam em melhoramento genético de gado e aves.</p>
-                    <p class="text-lg mb-4">Associação Brasileira de Zootecnistas (ABZ): reúne profissionais de referência no país.</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg ml-4 mb-4">
+                        <li>Francisco Antônio Macedo Costa – um dos pioneiros na implantação do curso de Zootecnia no Brasil.</li>
+                        <li>Pesquisadores da EMBRAPA que atuam em melhoramento genético de gado e aves.</li>
+                        <li>Associação Brasileira de Zootecnistas (ABZ): reúne profissionais de referência no país.</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        
-        <section id="formacao" class="mb-16">
+
+        <section id="imagens" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-image text-indigo-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Imagens</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Imagens da Profissão</h2>
                 </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://wp.ufpel.edu.br/lna/files/2022/10/capa-1-1024x576.jpg" alt="Imagem" class="w-100 rounded-2xl" onerror="this.style.display='none'">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <img src="https://wp.ufpel.edu.br/lna/files/2022/10/capa-1-1024x576.jpg" alt="Laboratório de nutrição animal" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" onerror="this.style.display='none'">
+                        <p class="text-center text-sm text-gray-600">Laboratórios de nutrição animal.</p>
+                    </div>
+                    <div>
+                        <img src="https://elevagro.com/wp-content/uploads/2023/09/2021-09-08-19-34_exemplo-esquema-de-pastejo-rotacionado.jpg" alt="Sistema de pastejo rotacionado" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" onerror="this.style.display='none'">
+                        <p class="text-center text-sm text-gray-600">Pastagens e sistemas de manejo sustentável.</p>
+                    </div>
+                    <div>
+                        <img src="https://revistacafeicultura.com.br/wp-content/uploads/2023/09/post-70272.jpg" alt="Pesquisa agropecuária" class="w-full h-48 object-cover rounded-lg shadow-md mb-2" onerror="this.style.display='none'">
+                        <p class="text-center text-sm text-gray-600">Centros de pesquisa agropecuária.</p>
+                    </div>
                 </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Laboratórios de nutrição animal.</p>
-                    <p class="text-lg mb-4">Fonte: https://share.google/images/zMJTJsusnd81VTuHb</p>
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://elevagro.com/wp-content/uploads/2023/09/2021-09-08-19-34_exemplo-esquema-de-pastejo-rotacionado.jpg" alt="Imagem" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Pastagens e sistemas de manejo sustentável.</p>
-                    <p class="text-lg mb-4">Fonte: https://share.google/images/7ZQnYOgkAfMxfte8K</p>
-                </div>
-                <div class="w-75 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                        <img src="https://revistacafeicultura.com.br/wp-content/uploads/2023/09/post-70272.jpg" alt="Imagem" class="w-100 rounded-2xl" onerror="this.style.display='none'">
-                </div>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p class="text-lg mb-4">Centros de pesquisa agropecuária.</p>
-                    <p class="text-lg mb-4">Fonte: https://share.google/images/CGuGOfOXqlVlQtOYd</p>
-                </div>
-                
             </div>
         </section>
         
         <section id="referencias" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-book text-red-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-book text-indigo-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Referências</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <ul class="list-disc list-inside space-y-4 text-lg">
-                        <li>
-                            Lei nº 5.550/1968 – regulamenta a profissão de zootecnista.
-                        </li>
-                        <li>
-                            Conselho Federal de Medicina Veterinária (CFMV): <a href="https://www.cfmv.gov.br" target="_blank" class="text-blue-600 hover:underline">https://www.cfmv.gov.br</a>. 
-                        </li>
-                        <li>
-                            Associação Brasileira de Zootecnistas (ABZ): <a href="https://abz.org.br" target="_blank" class="text-blue-600 hover:underline">https://abz.org.br</a>.
-                        </li>
-                        <li>
-                            Universidade Federal Rural de Pernambuco (UFRPE): <a href="https://www.ufrpe.br" target="_blank" class="text-blue-600 hover:underline">https://www.ufrpe.br</a>. 
-                        </li>
-                        <li>
-                            Empresa Brasileira de Pesquisa Agropecuária (EMBRAPA): <a href="https://www.embrapa.br " target="_blank" class="text-blue-600 hover:underline">https://www.embrapa.br </a>. 
-                        </li>
+                        <li class="break-words">Lei nº 5.550/1968 – regulamenta a profissão de zootecnista.</li>
+                        <li class="break-words">Conselho Federal de Medicina Veterinária (CFMV): <a href="https://www.cfmv.gov.br" target="_blank" class="text-indigo-600 hover:underline">https://www.cfmv.gov.br</a>.</li>
+                        <li class="break-words">Associação Brasileira de Zootecnistas (ABZ): <a href="https://abz.org.br" target="_blank" class="text-indigo-600 hover:underline">https://abz.org.br</a>.</li>
+                        <li class="break-words">Universidade Federal Rural de Pernambuco (UFRPE): <a href="https://www.ufrpe.br" target="_blank" class="text-indigo-600 hover:underline">https://www.ufrpe.br</a>.</li>
+                        <li class="break-words">Empresa Brasileira de Pesquisa Agropecuária (EMBRAPA): <a href="https://www.embrapa.br" target="_blank" class="text-indigo-600 hover:underline">https://www.embrapa.br</a>.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card bg-green-600 rounded-2xl shadow-xl p-8 text-white">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
-                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                         <img src="https://i.postimg.cc/Pr3vgbmL/Lukayan.jpg" alt="Lukayan" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
                         <i class="fas fa-user text-4xl" style="display: none;"></i>
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h2 class="text-3xl font-bold mb-4">Lukayan Neiva Barreto</h2>
                         <div class="space-y-3">
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-briefcase mr-2"></i>
-                                Apenas estudante
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-heart mr-2"></i>
-                                Gosta de assistir, passar tempo com pessoas que eu gosta e conversar
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                Irecê, Bahia, Brasil
-                            </p>
+                            <p class="text-lg opacity-90"><i class="fas fa-graduation-cap mr-2 w-5 text-center"></i>Cursando informática no IFBA - Campus Irecê (1º INFO B)</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-briefcase mr-2 w-5 text-center"></i>Apenas estudante</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2 w-5 text-center"></i>Gosta de assistir, passar tempo com pessoas que eu gosta e conversar</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-map-marker-alt mr-2 w-5 text-center"></i>Irecê, Bahia, Brasil</p>
                         </div>
                         <div class="flex justify-center md:justify-start space-x-4 mt-6">
                             <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
@@ -336,7 +317,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
                     <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
-                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-blue-300 hover:text-blue-200 transition duration-300">
+                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-indigo-300 hover:text-indigo-200 transition duration-300">
                         20251ireinfint0002@ifba.edu.br
                     </a>
                 </div>
@@ -347,7 +328,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -394,4 +375,3 @@
     </script>
 </body>
 </html>
-
