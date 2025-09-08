@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki - Escolha de profissão</title>
+    <title>Wiki - Empresário</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -18,8 +18,11 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        /* --- MUDANÇA DE COR --- */
+        /* Cor do Tema: Vermelho (Red), atualizado a partir do card do index */
+        /* Tailwind red-500: #ef4444; red-600: #dc2626 */
         .author-card {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
         }
         .nav-link {
             position: relative;
@@ -32,7 +35,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color:#22c55e;
+            background-color: #ef4444; /* Cor do sublinhado atualizada para red-500 */
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -48,11 +51,10 @@
         .back-to-top.visible {
             opacity: 1;
         }
-        /* Correção para quebra de linha nas referências */
         #referencias .prose li {
             overflow-wrap: break-word;
             word-wrap: break-word;
-            word-break: break-all; /* Força a quebra de texto para evitar overflow */
+            word-break: break-all;
         }
     </style>
 </head>
@@ -61,19 +63,18 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-briefcase text-white text-xl"></i> </div>
                     <h1 class="text-2xl font-bold text-gray-800">Wiki</h1>
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="index" class="nav-link text-gray-600 hover:text-green-600">Início</a> 
-                    <a href="#profissional" class="nav-link text-gray-600 hover:text-green-600">Profissional</a>
-                    <a href="#historico" class="nav-link text-gray-600 hover:text-green-600">Histórico</a>
-                    <a href="#carreira" class="nav-link text-gray-600 hover:text-green-600">Carreira</a>
-                    <a href="#formacao" class="nav-link text-gray-600 hover:text-green-600">Formação</a>
-                    <a href="#referencias" class="nav-link text-gray-600 hover:text-green-600">Referências</a>
-                    <a href="#autor" class="nav-link text-gray-600 hover:text-green-600">Autor</a>
+                    <a href="index" class="nav-link text-gray-600 hover:text-red-600">Início</a> 
+                    <a href="#profissional" class="nav-link text-gray-600 hover:text-red-600">Profissional</a>
+                    <a href="#historico" class="nav-link text-gray-600 hover:text-red-600">Histórico</a>
+                    <a href="#carreira" class="nav-link text-gray-600 hover:text-red-600">Carreira</a>
+                    <a href="#formacao" class="nav-link text-gray-600 hover:text-red-600">Formação</a>
+                    <a href="#referencias" class="nav-link text-gray-600 hover:text-red-600">Referências</a>
+                    <a href="#autor" class="nav-link text-gray-600 hover:text-red-600">Autor</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-2xl"></i>
@@ -91,15 +92,15 @@
         </div>
     </header>
 
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white py-20">
+    <section class="bg-gradient-to-r from-red-500 to-red-600 text-white py-20">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Empresário:</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Empresário</h2>
             <p class="text-xl md:text-2xl opacity-90 mb-8">Desafios, Liberdade, Escolhas e Riscos.</p>
             <div class="flex justify-center space-x-4">
-                <a href="#profissional" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                <a href="#profissional" class="bg-white text-red-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
                     Começar Leitura
                 </a>
-                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                <a href="#autor" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-red-600 transition duration-300">
                     Conhecer Autor
                 </a>
             </div>
@@ -110,8 +111,8 @@
         <section id="profissional" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-tie text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição do Profissional</h2>
                 </div>
@@ -124,8 +125,8 @@
         <section id="historico" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-history text-green-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-history text-red-600 text-2xl"></i>
                     </div>
                     <h2 class="text-3xl font-bold text-gray-800">Dados Históricos da Profissão e Carreira</h2>
                 </div>
@@ -138,9 +139,8 @@
         <section id="carreira" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-chart-line text-red-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Descrição da Carreira Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
@@ -149,26 +149,23 @@
             </div>
         </section>
 
-        <section id="formacao" class="mb-16">
+        <section id="formacao" class="mb-16 space-y-8">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800">Descrição do Processo de Formação Profissional</h2>
+                    <h2 class="text-3xl font-bold text-gray-800">Processo de Formação Profissional</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <p class="text-lg mb-4">Não existe uma formação obrigatória para ser empresário, mas a maioria busca cursos em Administração, Economia, Gestão de Negócios ou áreas correlatas para adquirir conhecimentos técnicos. Além disso, cursos de empreendedorismo, finanças, marketing e tecnologia são altamente recomendados. A prática no dia a dia do negócio, experiências prévias em gestão e aprendizado contínuo são fundamentais para o desenvolvimento das competências exigidas pelo mercado.</p>
                 </div>
             </div>
-        </section>
 
-        <section id="formacao" class="mb-16">
             <div class="section-card bg-white rounded-2xl shadow-xl p-8">
                 <div class="flex items-center mb-6">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                        <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
-                    </div>
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-lightbulb text-red-600 text-2xl"></i> </div>
                     <h2 class="text-3xl font-bold text-gray-800">Motivo da Escolha da Profissão</h2>
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
@@ -187,49 +184,29 @@
                 </div>
                 <div class="prose max-w-none text-gray-700 leading-relaxed">
                     <ul class="list-disc list-inside space-y-4 text-lg">
-                        <li>
-                            SEBRAE. “O perfil do empresário no Brasil.” Disponível em: <a href="https://www.sebrae.com.br" target="_blank" class="text-blue-600 hover:underline">https://www.sebrae.com.br</a>. 
-                        </li>
-                        <li>
-                            IBGE. “Dados sobre empreendedorismo no Brasil.” Disponível em: <a href="https://www.ibge.gov.br" target="_blank" class="text-blue-600 hover:underline">https://www.ibge.gov.br</a>. 
-                        </li>
-                        <li>
-                            DOLABELA, Fernando. O segredo de Luísa: uma ideia, uma paixão e um plano de negócios: como nasce o espírito empreendedor. Rio de Janeiro: Sextante, 1999.
-                        </li>
-                        <li>
-                            DORNELAS, José Carlos Assis. Empreendedorismo: transformando ideias em negócios. Rio de Janeiro: Campus, 2020.
-                        </li>
+                        <li class="break-words">SEBRAE. “O perfil do empresário no Brasil.” Disponível em: <a href="https://www.sebrae.com.br" target="_blank" class="text-red-600 hover:underline">https://www.sebrae.com.br</a>.</li>
+                        <li class="break-words">IBGE. “Dados sobre empreendedorismo no Brasil.” Disponível em: <a href="https://www.ibge.gov.br" target="_blank" class="text-red-600 hover:underline">https://www.ibge.gov.br</a>.</li>
+                        <li class="break-words">DOLABELA, Fernando. O segredo de Luísa: uma ideia, uma paixão e um plano de negócios: como nasce o espírito empreendedor. Rio de Janeiro: Sextante, 1999.</li>
+                        <li class="break-words">DORNELAS, José Carlos Assis. Empreendedorismo: transformando ideias em negócios. Rio de Janeiro: Campus, 2020.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="autor" class="mb-16">
-            <div class="author-card bg-green-600 rounded-2xl shadow-xl p-8 text-white">
+            <div class="author-card rounded-2xl shadow-xl p-8 text-white">
                 <div class="flex flex-col md:flex-row items-center md:items-start">
-                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8 flex-shrink-0">
                         <img src="https://i.postimg.cc/FKZYxjss/Micael.jpg" alt="Micael" class="w-28 h-28 rounded-full object-cover" onerror="this.style.display='none'">
                         <i class="fas fa-user text-4xl" style="display: none;"></i>
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <h2 class="text-3xl font-bold mb-4">Micael Guedes Ferreira</h2>
                         <div class="space-y-3">
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Cursando informática no IFBA - Campus Irecê (1º INFO B)
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-briefcase mr-2"></i>
-                                Apenas estudante
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-heart mr-2"></i>
-                                Gosta de futebol, que o diverte e motiva pelo espírito coletivo. Também curte jogar, viajar para conhecer novos lugares e sair, aproveitando momentos de lazer e convivência.
-                            </p>
-                            <p class="text-lg opacity-90">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                Irecê, Bahia, Brasil
-                            </p>
+                            <p class="text-lg opacity-90"><i class="fas fa-graduation-cap mr-2 w-5 text-center"></i>Cursando informática no IFBA - Campus Irecê (1º INFO B)</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-briefcase mr-2 w-5 text-center"></i>Apenas estudante</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-heart mr-2 w-5 text-center"></i>Gosta de futebol, que o diverte e motiva pelo espírito coletivo. Também curte jogar, viajar para conhecer novos lugares e sair, aproveitando momentos de lazer e convivência.</p>
+                            <p class="text-lg opacity-90"><i class="fas fa-map-marker-alt mr-2 w-5 text-center"></i>Irecê, Bahia, Brasil</p>
                         </div>
                         <div class="flex justify-center md:justify-start space-x-4 mt-6">
                             <a href="mailto:20251ireinfint0002@ifba.edu.br" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
@@ -260,7 +237,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
                     <p class="opacity-80 mb-2">Entre em contato para mais informações</p>
-                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-blue-300 hover:text-blue-200 transition duration-300">
+                    <a href="mailto:20251ireinfint0002@ifba.edu.br" class="text-red-300 hover:text-red-200 transition duration-300">
                         20251ireinfint0002@ifba.edu.br
                     </a>
                 </div>
@@ -271,7 +248,7 @@
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
+    <button id="backToTop" class="back-to-top bg-red-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -318,4 +295,3 @@
     </script>
 </body>
 </html>
-
