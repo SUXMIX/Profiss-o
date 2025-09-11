@@ -1,0 +1,6 @@
+# Permitir que todos os buscadores indexem o site
+User-agent: *
+Allow: /
+
+# Indicar o sitemap para facilitar o rastreamento
+Sitemap: https://escolhadeprofissão.site/sitemap.xml
